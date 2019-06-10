@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test</title>
+	<meta name="description" content="Site about web-devolp and web-design">
+	<link rel="stylesheet" href="css/foundation.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header>
+		<?php include('header.php'); ?>
+	</header>
+
+	<main>
+		<section class="conatcts">
+			<div class="row">
+				<div class="columns large-5 medium-4 ">
+					<h1 class="header">Contact Info:</h1>
+					<p class="txt-site frst-txt">
+						To give give beginning divide, cattle. Give moving 
+						won't, there the abundantly she'd she'd brought air 
+						upon. Light hath subdue. Life days creature upon 
+						first heaven gathering dry.
+					</p>
+					<p class="txt-site">
+						<strong>Address:</strong> 10111 Santa Monica Boulevard, LA
+					</p>
+					<p class="txt-site">
+						<strong>Phone:</strong> +44 987 065 908
+					</p>
+					<p class="txt-site">
+						<strong>Email:</strong> info@Example.com
+					</p>
+					<p class="txt-site">
+						<strong>Fax:</strong>  +44 987 065 909
+					</p>
+				</div>
+				<div class="columns large-7 medium-7 medium-offset-1 large-offset-0">
+					<form action="#">
+						<div class="row">
+							<div class="columns large-6">
+								<input class="input" type="text" placeholder="Your name" >
+						</div>
+							<div class="columns large-6">
+								<input class="input" type="text" placeholder="Your email" >
+							</div>
+						</div>
+						<input class="input" type="text" placeholder="Your title" >
+						<textarea name="" id="" cols="30" rows="5" placeholder="Your comment"></textarea>
+						<button class="btn"><a href="#form">SEND MESSAGE</a></button>
+					</form>
+				</div>
+			</div>
+		</section>
+		<section class="map">
+			<div class="row">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4673.541856250809!2d-118.39751596388442!3d34.07737974660751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bc0241447ad3%3A0x6ace8fa3a7d55d29!2s10111+Santa+Monica+Blvd%2C+Beverly+Hills%2C+CA+90210%2C+%D0%A1%D0%A8%D0%90!5e0!3m2!1sru!2sua!4v1560099111677!5m2!1sru!2sua" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+			</div>
+		</section>
+	</main>
+
+	<?php include('footer.php'); ?>
+
+	<script src="jquery/foundation.js"></script>
+	<script src="jquery/what-input.js"></script>
+	<script src="jquery/jquery.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="jquery/jquery.magnific-popup.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('.gallery-zoom').magnificPopup({
+				delegate: 'a',
+				type: 'image',
+				closeOnContentClick: false,
+				closeBtnInside: false,
+				mainClass: 'mfp-with-zoom mfp-img-mobile',
+				image: {
+					verticalFit: false,
+					titleSrc: function(item) {
+						return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank">image source</a>';
+					}
+				},
+				gallery: {
+					enabled: true
+				},
+				zoom: {
+					enabled: true,
+					duration: 300, // don't foget to change the duration also in CSS
+					opener: function(element) {
+						return element.find('img');
+					}
+				}
+				
+			});
+		});
+	</script>
+</body>
+</html>
