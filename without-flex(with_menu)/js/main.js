@@ -12,11 +12,10 @@ $(function(){
 			toggleMenuLi.each(function(){
 				$(this).children().on('click', function(e){
 						e.preventDefault();
-						let that = $(this);
-						let section = that.data('section');
+						let section = $(this).data('section');
 						let offsetSection  = $(`.${section}`).offset().top;
 						console.log(offsetSection)
-						that.animate({
+						$('html, body').animate({
 								scrollTop: offsetSection
 						},900)
 				})
