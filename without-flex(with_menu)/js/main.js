@@ -73,7 +73,7 @@ $(function(){
 			$('.work').magnificPopup({
 			    items: [
 			      {
-			        src: '/img/5.jpg'
+			        src: 'without-flex(with_menu)/img/5.jpg'
 			      },
 			      {
 			         src: '../img/1.jpg'
