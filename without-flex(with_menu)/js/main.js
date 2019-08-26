@@ -214,7 +214,7 @@ $(function(){
 						if(inputs[i].value == ''){
 							errorForm++;
 							inputs[i].classList.add('error__input');
-							inputs[i].value = 'Заполните поле'
+							inputs[i].placeholder = 'Заполните поле'
 						}
 					}
 
