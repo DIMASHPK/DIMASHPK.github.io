@@ -1,0 +1,51 @@
+.countries h2, h3 {
+    color: #5B5B5B;
+    font-weight: 600;
+}
+
+.countries .wrap {
+    background: #F0F0F0;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: .3s;
+    position: relative;
+}
+
+.countries .wrap:hover, .countries .wrap.active {
+    background: #0072BC;
+}
+
+.countries .wrap:hover .arrow, .countries .wrap.active .arrow {
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 1px;
+    width: 1px;
+    border-bottom: 7px solid white;
+    border-top: 7px solid white;
+    border-left: 8px solid #0072BC;
+    border-right: 0px solid white;
+
+}
+
+.countries h3 {
+    margin-bottom: 5px;
+    color: #0072BC;
+    font-size: 13px;
+}
+
+.countries .wrap:hover h3, .countries .wrap.active h3 {
+    color: white
+}
+
+.countries p {
+    margin: 0;
+    font-size: 11px;
+}
+
+.countries .wrap:hover p, .countries .wrap.active p {
+    color: white
+}

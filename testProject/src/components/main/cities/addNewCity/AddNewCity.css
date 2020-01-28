@@ -1,0 +1,28 @@
+.addCityWrap {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    background: #F0F0F0;
+}
+
+.addCityWrap h3 {
+    color: #0072BC;
+    margin-bottom: 10px;
+}
+
+.addCityWrap input, textarea {
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #DBDBDB;
+    font-size: 12px;
+}
+
+.addCityWrap input:focus, textarea:focus {
+    border-color: #0072BC
+}
+
+.addCityWrap .buttonScnd {
+    margin-left: 10px;
+}

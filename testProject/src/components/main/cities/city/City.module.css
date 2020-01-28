@@ -1,0 +1,28 @@
+/*city*/
+
+.cityWrap{
+    border-top: 1px solid #DBDBDB;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+}
+.cityWrap h3{
+    margin-bottom: 0;
+}
+
+.buttons{
+    display: inherit;
+    margin-left: 1rem;
+}
+
+.buttons span{
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: 1rem;
+    transition: .3s;
+}
+
+.buttons span:hover{
+    color: #B2B5C4;
+    transform: scale(1.1);
+}
