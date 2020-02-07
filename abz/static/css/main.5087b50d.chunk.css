@@ -704,41 +704,38 @@ footer {
 }
 @font-face {
   font-family: "OpenSans-Regular";
-  src: url(../static/media/OpenSans-Regular.3ed9575d.eot);
-  src: url(../static/media/OpenSans-Regular.3ed9575d.eot)
-      format("embedded-opentype"),
-    url(../static/media/OpenSans-Regular.3ed9575d.woff) format("woff"),
-    url(../static/media/OpenSans-Regular.3ed9575d.ttf) format("truetype");
+  src: url(../media/OpenSans-Regular.3ed9575d.eot);
+  src: url(../media/OpenSans-Regular.3ed9575d.eot) format("embedded-opentype"),
+    url(../media/OpenSans-Regular.3ed9575d.woff) format("woff"),
+    url(../media/OpenSans-Regular.3ed9575d.ttf) format("truetype");
   font-style: normal;
   font-weight: 400;
 }
 @font-face {
   font-family: "OpenSans-SemiBold";
-  src: url(../static/media/OpenSans-SemiBold.ba5cde21.eot);
-  src: url(../static/media/OpenSans-SemiBold.ba5cde21.eot)
-      format("embedded-opentype"),
-    url(../static/media/OpenSans-SemiBold.ba5cde21.woff) format("woff"),
-    url(../static/media/OpenSans-SemiBold.ba5cde21.ttf) format("truetype");
+  src: url(../media/OpenSans-SemiBold.ba5cde21.eot);
+  src: url(../media/OpenSans-SemiBold.ba5cde21.eot) format("embedded-opentype"),
+    url(../media/OpenSans-SemiBold.ba5cde21.woff) format("woff"),
+    url(../media/OpenSans-SemiBold.ba5cde21.ttf) format("truetype");
   font-style: normal;
   font-weight: 400;
 }
 @font-face {
   font-family: "SourceSansPro-Regular";
-  src: url(../static/media/SourceSansPro-Regular.c1678b46.eot);
-  src: url(../static/media/SourceSansPro-Regular.c1678b46.eot)
+  src: url(../media/SourceSansPro-Regular.c1678b46.eot);
+  src: url(../media/SourceSansPro-Regular.c1678b46.eot)
       format("embedded-opentype"),
-    url(../static/media/SourceSansPro-Regular.c1678b46.woff) format("woff"),
-    url(../static/media/SourceSansPro-Regular.c1678b46.ttf) format("truetype");
+    url(../media/SourceSansPro-Regular.c1678b46.woff) format("woff"),
+    url(../media/SourceSansPro-Regular.c1678b46.ttf) format("truetype");
   font-style: normal;
   font-weight: 400;
 }
 @font-face {
   font-family: "PTSans-Regular";
-  src: url(../static/media/PTSans-Regular.4ea26cd5.eot);
-  src: url(../static/media/PTSans-Regular.4ea26cd5.eot)
-      format("embedded-opentype"),
-    url(../static/media/PTSans-Regular.4ea26cd5.woff) format("woff"),
-    url(../static/media/PTSans-Regular.4ea26cd5.ttf) format("truetype");
+  src: url(../media/PTSans-Regular.4ea26cd5.eot);
+  src: url(../media/PTSans-Regular.4ea26cd5.eot) format("embedded-opentype"),
+    url(../media/PTSans-Regular.4ea26cd5.woff) format("woff"),
+    url(../media/PTSans-Regular.4ea26cd5.ttf) format("truetype");
   font-style: normal;
   font-weight: 400;
 }
