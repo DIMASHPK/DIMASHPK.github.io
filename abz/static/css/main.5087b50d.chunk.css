@@ -305,6 +305,13 @@ header .button_open {
   margin-top: 50px;
   margin-bottom: 100px;
 }
+
+@media screen and (max-width: 767px){
+  .lds-roller{
+    margin: 0px 160px 55px auto;
+  }
+}
+
 .lds-roller div {
   -webkit-animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
   animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
