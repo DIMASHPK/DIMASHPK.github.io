@@ -67,7 +67,7 @@
               var u,
                 i = document.createElement("script");
               (i.charset = "utf-8"),
-                (i.timeout = 120),
+                (i.timeout = 10),
                 a.nc && i.setAttribute("nonce", a.nc),
                 (i.src = (function(e) {
                   return (
@@ -105,7 +105,7 @@
               };
               var l = setTimeout(function() {
                 u({ type: "timeout", target: i });
-              }, 1204);
+              }, 12e4);
               (i.onerror = i.onload = u), document.head.appendChild(i);
             }
           return Promise.all(r);
