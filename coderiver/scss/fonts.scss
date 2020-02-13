@@ -1,0 +1,38 @@
+/* fonts */
+
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("../fonts/Roboto-Bold/Roboto-Bold.eot");
+  src: url("../fonts/Roboto-Bold/Roboto-Bold.eot");
+  src: url("../fonts/Roboto-Bold/Roboto-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/Roboto-Bold/Roboto-Bold.woff") format("woff"),
+    url("../fonts/Roboto-Bold/Roboto-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: "Roboto-Light";
+  src: url("../fonts/Roboto-Light/Roboto-Light.eot");
+  src: url("../fonts/Roboto-Light/Roboto-Light.eot");
+  src: url("../fonts/Roboto-Light/Roboto-Light.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/Roboto-Light/Roboto-Light.woff") format("woff"),
+    url("../fonts/Roboto-Light/Roboto-Light.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "RubikMonoOne-Regular";
+  src: url("../fonts/RubikMonoOne-Regular/RubikMonoOne-Regular.eot");
+  src: url("../fonts/RubikMonoOne-Regular/RubikMonoOne-Regular.eot");
+  src: url("../fonts/RubikMonoOne-Regular/RubikMonoOne-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/RubikMonoOne-Regular/RubikMonoOne-Regular.woff")
+      format("woff"),
+    url("../fonts/RubikMonoOne-Regular/RubikMonoOne-Regular.ttf")
+      format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
