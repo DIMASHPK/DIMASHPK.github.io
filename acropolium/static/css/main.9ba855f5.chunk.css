@@ -1,0 +1,324 @@
+.searchingPanel {
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  align-items: center;
+}
+.searchingPanel .search {
+  position: relative;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.searchingPanel .search input {
+  width: 500px;
+  padding: 5px 10px;
+  outline: none;
+  border-radius: 10px 10px 0 0;
+  border: 1px solid grey;
+}
+.searchingPanel .filters,
+.searchingPanel .sort {
+  margin-top: 5px;
+  padding: 5px 50px 5px 10px;
+  background: #47526e;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 0 0 0 10px;
+  position: relative;
+}
+.searchingPanel .filters .possibleFilters,
+.searchingPanel .filters .possibleSorts,
+.searchingPanel .sort .possibleFilters,
+.searchingPanel .sort .possibleSorts {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  border-radius: 0 0 0 10px;
+  background: #47526e;
+  z-index: 2222;
+}
+.searchingPanel .filters .possibleFilters .sortOption,
+.searchingPanel .filters .possibleSorts .sortOption,
+.searchingPanel .sort .possibleFilters .sortOption,
+.searchingPanel .sort .possibleSorts .sortOption {
+  font-size: 14px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+  padding-left: 10px;
+}
+.searchingPanel .filters .possibleFilters .sortOption:hover,
+.searchingPanel .filters .possibleSorts .sortOption:hover,
+.searchingPanel .sort .possibleFilters .sortOption:hover,
+.searchingPanel .sort .possibleSorts .sortOption:hover {
+  color: #47526e;
+  background: #fff;
+}
+.searchingPanel .filters {
+  margin-left: 5px;
+  border-radius: 0 0 10px 0;
+}
+.searchingPanel .filters .possibleFilters {
+  border-radius: 0 0 10px 0;
+  z-index: 333;
+}
+.searchingPanel .noRadius {
+  border-radius: 0;
+}
+@media screen and (max-width: 500px) {
+  .searchingPanel {
+    width: 70%;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .searchingPanel .search {
+    grid-column-end: 1;
+  }
+  .searchingPanel .filters,
+  .searchingPanel .search input,
+  .searchingPanel .sort {
+    border-radius: 0;
+    width: 80%;
+    margin: 0 auto 10px;
+    display: block;
+  }
+  .searchingPanel .filters .possibleSorts,
+  .searchingPanel .search input .possibleSorts,
+  .searchingPanel .sort .possibleSorts {
+    border-radius: 0;
+  }
+}
+@media screen and (max-width: 425px) {
+  .searchingPanel,
+  .searchingPanel .filters,
+  .searchingPanel .search input,
+  .searchingPanel .sort {
+    width: 100%;
+  }
+}
+a {
+  color: #47526e !important;
+}
+a:hover {
+  text-decoration: none !important;
+}
+.friend {
+  display: flex;
+  margin-bottom: 50px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.friend:hover {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  background: #47526e;
+  position: relative;
+  border-radius: 5px;
+  z-index: 999;
+}
+.friend:hover .avatarWrap {
+  border-radius: 5px 0 0 5px;
+}
+.friend:hover .contentWrap h3,
+.friend:hover .contentWrap p,
+.friend:hover .contentWrap p.role {
+  color: #fff;
+}
+.friend .avatarWrap {
+  width: 100px;
+  overflow: hidden;
+}
+.friend .avatarWrap img {
+  width: 100%;
+  height: 100%;
+}
+.friend .contentWrap {
+  margin-left: 20px;
+}
+.friend .contentWrap h3 {
+  margin-bottom: 0;
+  font-size: 23px;
+}
+.friend .contentWrap p {
+  margin: 0 0 5px;
+}
+.friend .contentWrap p.role {
+  font-size: 11px;
+  color: grey;
+}
+.lds-ellipsis {
+  display: block;
+  margin: auto;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #000;
+  -webkit-animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:first-child {
+  left: 8px;
+  -webkit-animation: lds-ellipsis1 0.6s infinite;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+}
+.lds-ellipsis div:nth-child(2),
+.lds-ellipsis div:nth-child(3) {
+  -webkit-animation: lds-ellipsis2 0.6s infinite;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  -webkit-animation: lds-ellipsis3 0.6s infinite;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@-webkit-keyframes lds-ellipsis1 {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes lds-ellipsis3 {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+}
+@-webkit-keyframes lds-ellipsis2 {
+  0% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+  to {
+    -webkit-transform: translate(24px);
+    transform: translate(24px);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+  to {
+    -webkit-transform: translate(24px);
+    transform: translate(24px);
+  }
+}
+.allFriends {
+  padding: 0 0 100px;
+}
+.allFriends h2 {
+  color: #47526e;
+  margin-bottom: 30px;
+}
+.searchingSection {
+  padding: 100px 0;
+}
+@media screen and (max-width: 500px) {
+  .searchingSection {
+    padding: 50px 0;
+  }
+}
+.friendPage h2 {
+  margin: 50px 0;
+  color: #47526e;
+}
+.friendPage img {
+  width: 100%;
+  display: block;
+  margin: auto auto 30px;
+}
+.friendPage h3 {
+  color: #47526e;
+}
+.friendPage p {
+  margin: 0 0 5px;
+}
+.friendPage .txt {
+  margin-top: 20px;
+}
+@media screen and (max-width: 767px) {
+  .friendPage img {
+    width: auto;
+  }
+  .friendPage .content,
+  .friendPage .txt,
+  .friendPage h2 {
+    text-align: center;
+  }
+}
+@font-face {
+  font-family: "OPTIHobble-OldStyle";
+  src: url(../media/OPTIHobble-OldStyle.31d98c8d.eot);
+  src: url(../media/OPTIHobble-OldStyle.31d98c8d.eot)
+      format("embedded-opentype"),
+    url(../media/OPTIHobble-OldStyle.31d98c8d.woff) format("woff"),
+    url(../media/OPTIHobble-OldStyle.31d98c8d.ttf) format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+body {
+  font-family: OPTIHobble-OldStyle;
+}
+header {
+  background: #47526e;
+  padding: 20px 0;
+}
+header h1 {
+  color: #fff;
+}
+header a:hover {
+  text-decoration: none;
+}
+footer {
+  padding: 20px 0;
+  background: #47526e;
+}
+footer p {
+  color: #fff;
+  margin: 0;
+}
+/*# sourceMappingURL=main.9ba855f5.chunk.css.map */
