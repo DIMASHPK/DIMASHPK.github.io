@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "./static/css/main.10ccf1f1.chunk.css",
+    "main.js": "./static/js/main.9bfcd8d8.chunk.js",
+    "main.js.map": "./static/js/main.9bfcd8d8.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.a43b6eb2.js",
+    "runtime-main.js.map": "./static/js/runtime-main.a43b6eb2.js.map",
+    "static/css/2.4121280a.chunk.css": "./static/css/2.4121280a.chunk.css",
+    "static/js/2.377cd0f0.chunk.js": "./static/js/2.377cd0f0.chunk.js",
+    "static/js/2.377cd0f0.chunk.js.map": "./static/js/2.377cd0f0.chunk.js.map",
+    "index.html": "./index.html",
+    "precache-manifest.e66a39cf8055e6763cee943e303bbc97.js": "./precache-manifest.e66a39cf8055e6763cee943e303bbc97.js",
+    "service-worker.js": "./service-worker.js",
+    "static/css/2.4121280a.chunk.css.map": "./static/css/2.4121280a.chunk.css.map",
+    "static/css/main.10ccf1f1.chunk.css.map": "./static/css/main.10ccf1f1.chunk.css.map",
+    "static/js/2.377cd0f0.chunk.js.LICENSE.txt": "./static/js/2.377cd0f0.chunk.js.LICENSE.txt",
+    "static/media/fonts.scss": "./static/media/OPTIHobble-OldStyle.31d98c8d.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a43b6eb2.js",
+    "static/css/2.4121280a.chunk.css",
+    "static/js/2.377cd0f0.chunk.js",
+    "static/css/main.10ccf1f1.chunk.css",
+    "static/js/main.9bfcd8d8.chunk.js"
+  ]
+}

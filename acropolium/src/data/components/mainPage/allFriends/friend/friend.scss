@@ -1,0 +1,70 @@
+a {
+  color: #47526E !important;
+
+  &:hover {
+    text-decoration: none !important;
+  }
+}
+
+.friend {
+  display: flex;
+  margin-bottom: 50px;
+  transition: .3s;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.2);
+    background: #47526E;
+    position: relative;
+    border-radius: 5px;
+    z-index: 999;
+
+    .avatarWrap {
+      border-radius: 5px 0 0 5px;
+    }
+
+    .contentWrap {
+      h3, p, p.role {
+        color: #fff;
+      }
+    }
+  }
+
+  .avatarWrap {
+    width: 100px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .contentWrap {
+    margin-left: 20px;
+    h3 {
+      margin-bottom: 0;
+      font-size: 23px;
+    }
+    p {
+      margin: 0 0 5px;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .friend {
+    &:hover {
+      transform: scale(1);
+      background: #FFF;
+      border-radius: 0;
+      .avatarWrap {
+        border-radius: 0;
+      }
+      .contentWrap {
+        h3, p {
+          color: #47526E;
+        }
+      }
+    }}
+}
