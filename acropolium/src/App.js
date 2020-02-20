@@ -83,48 +83,53 @@ class App extends React.Component {
 
     getId = id => this.setState({id: this.state.friends.findIndex(friend => friend.id === id)});
 
+    getMoreFriends = async() => {
+        let scrollHeight = Math.max(
+            document.body.scrollHeight, document.documentElement.scrollHeight,
+            document.body.offsetHeight, document.documentElement.offsetHeight,
+            document.body.clientHeight, document.documentElement.clientHeight
+        );
+
+        let pageOffset = window.pageYOffset + window.innerHeight;
+
+
+        if(pageOffset === scrollHeight && this.state.page < 6) {
+            this.setState({isFetching: true});
+
+            let request  =  await fetch(`https://rickandmortyapi.com/api/character/?page=${this.state.page}`);
+            let res = await request.json();
+            res = res.results;
+            this.setState({
+                friends: [...this.state.friends, ...res],
+                defaultFriends: [...this.state.defaultFriends,...res.map(res=>({...res}))],
+                page: this.state.page + 1,
+
+            });
+            setTimeout(()=> this.setState({isFetching: false}), 2000);
+        }
+    }
+
     async componentDidMount() {
 
-        let request  =  await fetch("https://rickandmortyapi.com/api/character/")
+        let request  =  await fetch("https://rickandmortyapi.com/api/character/");
         let res = await request.json();
         res = res.results;
-        console.table(res);
         this.setState({
             friends: [...res],
             defaultFriends: res.map(res=>({...res})),
-        })
+        });
         setTimeout(()=> this.setState({isFetching: false}), 2000);
 
-        window.addEventListener('scroll', async ()=> {
+        window.addEventListener('scroll', this.getMoreFriends);
 
-            let counter = 2;
-            let pageOffset = window.pageYOffset + window.innerHeight;
-            let scrollHeight = Math.max(
-                document.body.scrollHeight, document.documentElement.scrollHeight,
-                document.body.offsetHeight, document.documentElement.offsetHeight,
-                document.body.clientHeight, document.documentElement.clientHeight
-            );
+        const timer = setInterval(()=>this.state.page < 6 ?
+            window.innerHeight === document.body.scrollHeight && this.getMoreFriends()
+            : clearInterval(timer), 200)
 
-            if(pageOffset === scrollHeight && this.state.page < 6) {
-                this.setState({isFetching: true});
-                let preload = this.state.page === 5;
-                let request  =  await fetch(`https://rickandmortyapi.com/api/character/?page=${this.state.page}`);
-                let res = await request.json();
-                res = res.results;
-                this.setState({
-                    friends: [...this.state.friends, ...res],
-                    defaultFriends: [...this.state.defaultFriends,...res.map(res=>({...res}))],
-                    page: this.state.page + 1,
-
-                })
-                setTimeout(()=> this.setState({isFetching: false}), 2000);
-            }
-
-        })
     }
 
     render(){
-        let {friends, search,  filter, isFetching, sort} = this.state;
+        let {friends, search, filter, isFetching, sort} = this.state;
         return (
             <Context.Provider value={{
                 friends,
@@ -141,8 +146,7 @@ class App extends React.Component {
                 sort,
                 getSort: this.getSort,
                 sortFriends: this.sortFriends,
-            }
-            }>
+            }}>
                 <header>
                     <div className="container text-left">
                         <NavLink to={"/"} >
