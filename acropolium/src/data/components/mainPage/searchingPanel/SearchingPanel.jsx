@@ -16,7 +16,7 @@ export const SearchingPanel = () => {
 
     const applySort = (name) => {
         getSort(name);
-        sortFriends(name);
+        sortFriends();
         toggleSortingFilter();
     };
     const applyFilter = (filter) => {
