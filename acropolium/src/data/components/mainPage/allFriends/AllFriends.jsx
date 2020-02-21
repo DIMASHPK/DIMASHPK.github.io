@@ -14,7 +14,7 @@ export const AllFriends = () => {
                 <h2>All friends</h2>
                 <div className="row">
                     {
-                        friends.map(({id, image, actor, yearOfBirth, created, name, location, gender, status}, i) =>
+                        friends.map(({id, image, created, name, location, gender, status}, i) =>
                             <React.Fragment key={id}>
                                 {
                                     searchBy(name) &&
