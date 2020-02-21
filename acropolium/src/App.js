@@ -83,7 +83,7 @@ class App extends React.Component {
 
     getId = id => this.setState({id: this.state.friends.findIndex(friend => friend.id === id)});
 
-    getMoreFriends = async() => {
+    getMoreFriendsOnScroll = async() => {
         let scrollHeight = Math.max(
             document.body.scrollHeight, document.documentElement.scrollHeight,
             document.body.offsetHeight, document.documentElement.offsetHeight,
@@ -120,10 +120,10 @@ class App extends React.Component {
         });
         setTimeout(()=> this.setState({isFetching: false}), 2000);
 
-        window.addEventListener('scroll', this.getMoreFriends);
+        window.addEventListener('scroll', this.getMoreFriendsOnScroll);
 
         const timer = setInterval(()=>this.state.page < 6 ?
-            window.innerHeight === document.body.scrollHeight && this.getMoreFriends()
+            window.innerHeight === document.body.scrollHeight && this.getMoreFriendsOnScroll()
             : clearInterval(timer), 200)
 
     }
