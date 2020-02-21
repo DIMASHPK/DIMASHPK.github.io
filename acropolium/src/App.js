@@ -41,7 +41,7 @@ class App extends React.Component {
 
     handleChange = ({target: {value}}) => this.setState({search: value});
 
-    searchBy = (name) => name.includes(this.state.search);
+    searchBy = name => name.includes(this.state.search);
 
     getFilter = filter => this.setState({filter: filter});
 
@@ -65,7 +65,7 @@ class App extends React.Component {
 
     getSort = sort => this.setState({sort: sort});
 
-    sortFriends = (sort) => {
+    sortFriends = sort => {
 
         switch(sort) {
             case 'name ascending':
