@@ -1,5 +1,5 @@
 a {
-  color: #47526E !important;
+  color: #47526e !important;
 
   &:hover {
     text-decoration: none !important;
@@ -9,12 +9,12 @@ a {
 .friend {
   display: flex;
   margin-bottom: 50px;
-  transition: .3s;
+  transition: 0.3s;
   cursor: pointer;
 
   &:hover {
     transform: scale(1.2);
-    background: #47526E;
+    background: #47526e;
     position: relative;
     border-radius: 5px;
     z-index: 999;
@@ -24,7 +24,9 @@ a {
     }
 
     .contentWrap {
-      h3, p, p.role {
+      h3,
+      p,
+      p.role {
         color: #fff;
       }
     }
@@ -56,15 +58,17 @@ a {
   .friend {
     &:hover {
       transform: scale(1);
-      background: #FFF;
+      background: #fff;
       border-radius: 0;
       .avatarWrap {
         border-radius: 0;
       }
       .contentWrap {
-        h3, p {
-          color: #47526E;
+        h3,
+        p {
+          color: #47526e;
         }
       }
-    }}
+    }
+  }
 }

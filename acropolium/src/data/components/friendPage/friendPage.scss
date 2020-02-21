@@ -1,7 +1,7 @@
 .friendPage {
   h2 {
     margin: 50px 0;
-    color: #47526E;
+    color: #47526e;
   }
 
   img {
@@ -12,7 +12,7 @@
   }
 
   h3 {
-    color: #47526E
+    color: #47526e;
   }
 
   p {
@@ -30,15 +30,14 @@
     border: 1px solid #fff;
     color: #fff !important;
     padding: 5px 15px;
-    transition: .3s;
-    background: #47526E;
+    transition: 0.3s;
+    background: #47526e;
 
     &:hover {
       border-radius: 10px;
-      border-color: #47526E;
+      border-color: #47526e;
       background: #fff;
-      color: #47526E !important;
-
+      color: #47526e !important;
     }
   }
 }

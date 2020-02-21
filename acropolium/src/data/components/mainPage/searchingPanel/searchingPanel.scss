@@ -19,32 +19,34 @@
     }
   }
 
-  .sort, .filters {
+  .sort,
+  .filters {
     margin-top: 5px;
     padding: 5px 0 5px 10px;
-    background: #47526E;
+    background: #47526e;
     color: #fff;
     cursor: pointer;
     border-radius: 0 0 0 10px;
     position: relative;
 
-    .possibleSorts, .possibleFilters {
+    .possibleSorts,
+    .possibleFilters {
       position: absolute;
       top: 100%;
       left: 0;
       width: 100%;
       border-radius: 0 0 0 10px;
-      background: #47526E;
+      background: #47526e;
       z-index: 2222;
 
       .sortOption {
         font-size: 14px;
-        transition: .3s;
+        transition: 0.3s;
         cursor: pointer;
         padding-left: 10px;
 
         &:hover {
-          color: #47526E;
+          color: #47526e;
           background: #fff;
         }
       }
@@ -66,7 +68,6 @@
   }
 }
 
-
 @media screen and (max-width: 500px) {
   .searchingPanel {
     width: 70%;
@@ -77,7 +78,9 @@
       grid-column-end: 1;
     }
 
-    .search input, .sort, .filters {
+    .search input,
+    .sort,
+    .filters {
       border-radius: 0;
       width: 80%;
       margin: 0 auto 10px;
@@ -94,7 +97,9 @@
   .searchingPanel {
     width: 100%;
 
-    .search input, .sort, .filters {
+    .search input,
+    .sort,
+    .filters {
       width: 100%;
     }
   }
