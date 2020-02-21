@@ -65,9 +65,9 @@ class App extends React.Component {
 
     getSort = sort => this.setState({sort: sort});
 
-    sortFriends = sort => {
+    sortFriends = () => {
 
-        switch(sort) {
+        switch(this.state.sort) {
             case 'name ascending':
                 return this.setState({friends: this.state.friends.sort((a,b)=> a.name > b.name ? -1 : 1)});
             case 'name descending':
