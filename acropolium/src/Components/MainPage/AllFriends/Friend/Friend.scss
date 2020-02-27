@@ -1,0 +1,69 @@
+.friend {
+  transition: 0.3s;
+  &__link {
+    display: flex;
+    margin-bottom: 50px;
+    cursor: pointer;
+    color: #47526e !important;
+    &:hover {
+      text-decoration: none !important;
+    }
+  }
+  &:hover {
+    transform: scale(1.2);
+    background: #47526e;
+    position: relative;
+    border-radius: 5px;
+    z-index: 999;
+
+    .friend__avatarWrap {
+      border-radius: 5px 0 0 5px;
+    }
+
+
+    .friend__name,
+    .friend__info {
+        color: #fff;
+      
+    }
+  }
+
+  &__avatarWrap {
+    width: 100px;
+    overflow: hidden;
+  }
+
+  &__avatar {
+    width: 100%;
+  }
+
+  &__contentWrap {
+    margin-left: 20px;
+  }
+
+  &__name {
+    margin-bottom: 0;
+    font-size: 23px;
+  }
+  &__info {
+    margin: 0 0 5px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .friend {
+    &:hover {
+      transform: scale(1);
+      background: #fff;
+      border-radius: 0;
+      .friend__avatarWrap {
+        border-radius: 0;
+      }
+      
+      .friend__name,
+      .friend__info {
+          color: #47526e;
+        }
+    }
+  }
+}

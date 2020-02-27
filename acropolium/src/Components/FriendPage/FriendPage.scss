@@ -1,0 +1,64 @@
+.friendPage {
+  &__title {
+    margin: 50px 0;
+    color: #47526e;
+  }
+
+  &__avatar {
+    width: 100%;
+    margin: auto;
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  &__name {
+    color: #47526e;
+  }
+
+  &__info {
+    margin: 0 0 5px;
+  }
+
+  &__text {
+    margin-top: 20px;
+  }
+
+  &__link {
+    margin-top: 20px;
+    display: inline-block;
+    font-size: 20px;
+    border: 1px solid #fff;
+    color: #fff !important;
+    padding: 5px 15px;
+    transition: 0.3s;
+    background: #47526e;
+    &:hover {
+      border-radius: 10px;
+      border-color: #47526e;
+      background: #fff;
+      color: #47526e !important;
+      text-decoration: none;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .friendPage {
+    &__avatar {
+      width: auto;
+    }
+    &__title,
+    &__name,
+    &__info,
+    &__text {
+      text-align: center;
+    }
+
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .friendPage .avatar {
+    width: 100%;
+  }
+}
