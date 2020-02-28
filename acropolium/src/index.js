@@ -14,7 +14,7 @@ function ScrollToTop() {
 }
 console.log(process.env.PUBLIC_URL)
 ReactDOM.render(
-	<BrowserRouter basename={'https://dimashpk.github.io/'}>
+	<BrowserRouter basename={'acropolium/build/'}>
 		<ScrollToTop />
 		<HOCForApi />
 	</BrowserRouter>,
