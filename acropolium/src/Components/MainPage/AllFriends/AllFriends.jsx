@@ -23,7 +23,7 @@ export const AllFriends = ({
 				<div className='row'>
 					{arrayOfFriends.length > 0 ? (
 						arrayOfFriends.map(
-							({ id, image, created, name, location, gender, status }, i) => (
+							({ id, image, created, name, location, gender, status }) => (
 								<React.Fragment key={id}>
 									<Friend
 										id={id}

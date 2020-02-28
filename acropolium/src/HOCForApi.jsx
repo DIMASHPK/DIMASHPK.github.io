@@ -8,12 +8,12 @@ const HOCForApi = Component =>
 			this.state = {
 				friends: [],
 				defaultFriends: [],
-				page: 2,
+				page: 0,
 				isFetching: true,
 			}
 		}
 
-		getFriends = async () => {
+		/* getFriends = async () => {
 			let request = await fetch(
 				'https://cors-anywhere.herokuapp.com/https://rickandmortyapi.com/api/character/'
 			)
@@ -24,10 +24,10 @@ const HOCForApi = Component =>
 				defaultFriends: [...res.map(res => ({ ...res }))],
 			})
 			setTimeout(() => this.setState({ isFetching: false }), 2000)
-		}
+		} */
 
-		getMoreFriends = async () => {
-			this.setState({ isFetching: true })
+		getFriends = async () => {
+			this.setState({ isFetching: true, page: this.state.page + 1 })
 
 			let request = await fetch(
 				`https://cors-anywhere.herokuapp.com/https://rickandmortyapi.com/api/character/?page=${this.state.page}`
@@ -40,12 +40,11 @@ const HOCForApi = Component =>
 					...this.state.defaultFriends,
 					...res.map(res => ({ ...res })),
 				],
-				page: this.state.page + 1,
 			})
 			setTimeout(() => this.setState({ isFetching: false }), 2000)
 		}
 
-		getMoreFriendsOnScroll = () => {
+		getFriendsOnScroll = () => {
 			let scrollHeight = Math.max(
 				document.body.scrollHeight,
 				document.documentElement.scrollHeight,
@@ -57,17 +56,17 @@ const HOCForApi = Component =>
 
 			let pageOffset = window.pageYOffset + window.innerHeight
 
-			if (pageOffset === scrollHeight && this.state.page < 6) {
-				this.getMoreFriends()
+			if (pageOffset === scrollHeight && this.state.page < 5) {
+				this.getFriends()
 			}
 		}
 
-		getMoreFriendswithoutScroll = () => {
+		getFriendswithoutScroll = () => {
 			const timer = setInterval(
 				() =>
-					this.state.page < 6
+					this.state.page < 5
 						? window.innerHeight === document.body.scrollHeight &&
-						  this.getMoreFriends()
+						  this.getFriends()
 						: clearInterval(timer),
 				200
 			)
@@ -75,8 +74,8 @@ const HOCForApi = Component =>
 
 		async componentDidMount() {
 			this.getFriends()
-			window.addEventListener('scroll', this.getMoreFriendsOnScroll)
-			this.getMoreFriendswithoutScroll()
+			window.addEventListener('scroll', this.getFriendsOnScroll)
+			this.getFriendswithoutScroll()
 		}
 
 		render() {
