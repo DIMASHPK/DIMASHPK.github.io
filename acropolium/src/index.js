@@ -12,9 +12,9 @@ function ScrollToTop() {
 
 	return null
 }
-
+console.log(process.env.PUBLIC_URL)
 ReactDOM.render(
-	<BrowserRouter basename={process.env.PUBLIC_URL}>
+	<BrowserRouter basename={'https://dimashpk.github.io/'}>
 		<ScrollToTop />
 		<HOCForApi />
 	</BrowserRouter>,
