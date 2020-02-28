@@ -17,12 +17,12 @@ export const Sorts = ({
 	sort,
 }) => (
 	<div className={`panel__features sorts ${visibleSort ? 'noRadius' : ''}`}>
-		<div
-			className='panel__activeFeatures'
+		<button
+			className='panel__activeFeature'
 			onClick={() => toggleSortingFilter()}
 		>
 			sorting by{sort ? ` ${sort}` : '...'}
-		</div>
+		</button>
 		{visibleSort && (
 			<div className='panel__chooseFeatures'>
 				{sorts.map(({ id, header, name }) =>

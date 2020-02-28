@@ -2,10 +2,10 @@ import React from 'react'
 import './Preloader.scss'
 
 export const Preloader = () => (
-	<div className='ldsEllipsis'>
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
+	<div className='preloader'>
+		<div className={'preloader__element'}></div>
+		<div className={'preloader__element'}></div>
+		<div className={'preloader__element'}></div>
+		<div className={'preloader__element'}></div>
 	</div>
 )

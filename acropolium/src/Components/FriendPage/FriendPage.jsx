@@ -1,10 +1,13 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import { Preloader } from '../Preloader/Preloader'
 import './FriendPage.scss'
 
-export const FriendPage = ({ friend }) => (
+export const FriendPage = ({ friend, isFetching }) => (
 	<>
-		{friend && (
+		{isFetching ? (
+			<Preloader />
+		) : (
 			<section className={'friendPage'}>
 				<div className='container'>
 					<h2 className={'friendPage__title'}>Friend Page</h2>
@@ -18,7 +21,7 @@ export const FriendPage = ({ friend }) => (
 							/>
 						</div>
 						<div className='col-lg-6 col-md-6'>
-							<div className='friendPage__info'>
+							<div className='friendPage__content'>
 								<h3 className={'friendPage__name'}>
 									{friend.name ? friend.name : 'unknown'}
 								</h3>

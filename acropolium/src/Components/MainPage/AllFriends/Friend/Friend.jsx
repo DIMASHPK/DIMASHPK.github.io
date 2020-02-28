@@ -2,20 +2,10 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import './Friend.scss'
 
-export const Friend = ({
-	idForLink,
-	id,
-	img,
-	name,
-	age,
-	house,
-	gender,
-	status,
-	clickId,
-}) => (
+export const Friend = ({ id, img, name, age, house, gender, status }) => (
 	<div className='col-lg-4 col-md-6'>
-		<div className='friend' onClick={() => clickId(id)}>
-			<NavLink className={'friend__link'} to={`/friend/${idForLink}`}>
+		<div className='allFriendsSection__friend friend'>
+			<NavLink className={'friend__link'} to={`/friend/${id}`}>
 				<div className='friend__avatarWrap'>
 					<img
 						className={'friend__avatar'}

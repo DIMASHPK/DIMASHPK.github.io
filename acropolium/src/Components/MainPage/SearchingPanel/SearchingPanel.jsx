@@ -2,17 +2,17 @@ import React from 'react'
 import { Search } from './Search/Search'
 import { Sorts } from './Sorts/Sorting'
 import { Filters } from './Filters/Filters'
+import { ResetButton } from './ResetButton/ResetButton'
 import './SearchingPanel.scss'
 
 export const SearchingPanel = ({
-	sortFriends,
 	getFilter,
 	getSort,
 	handleChange,
 	value,
 	filter,
-	sorts,
 	sort,
+	resetAll,
 }) => {
 	let [visibleSort, setVisibleSort] = React.useState(false)
 	let [visibleFilters, setVisibleFilters] = React.useState(false)
@@ -22,7 +22,6 @@ export const SearchingPanel = ({
 
 	const applySort = name => {
 		getSort(name)
-		sortFriends()
 		toggleSortingFilter(false)
 	}
 
@@ -37,11 +36,11 @@ export const SearchingPanel = ({
 				<div className='row'>
 					<div className='searchingSection__panel panel'>
 						<Search handleChange={handleChange} value={value} />
+						<ResetButton resetAll={resetAll} />
 						<Sorts
 							toggleSortingFilter={toggleSortingFilter}
 							applySort={applySort}
 							visibleSort={visibleSort}
-							sorts={sorts}
 							sort={sort}
 						/>
 						<Filters

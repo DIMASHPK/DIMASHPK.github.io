@@ -3,18 +3,36 @@
   .panel {
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
     align-items: center;
-    &__activeFeatures {
+    &__activeFeature {
       cursor: pointer;
+      display: block;
+      background: none;
+      color: #fff;
+      outline: none;
+      width: 100%;
+      padding: 5px 0 5px 10px;
+      border: 1px solid #47526e;
+      border-radius: 0 0 0 10px;
+      &:hover,
+      &:focus{
+        background: #fff;
+        color: #47526e;
+        
+      }
     }
+    .sorts{
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+    
     &__features {
       margin-top: 5px;
-      padding: 5px 0 5px 10px;
+      border-radius: 0 0 0 10px;
       background: #47526e;
       color: #fff;
-      border-radius: 0 0 0 10px;
       position: relative;
     }
     &__chooseFeatures {
@@ -45,13 +63,20 @@
         background: #fff;
       }
     }
-
     .filters {
       margin-left: 5px;
       border-radius: 0 0 10px 0;
+      grid-column-start: 3;
+      grid-column-end: 5;
+      .panel_activeFeature{
+        border-radius: 0 0 10px 0;
+      }
       .panel__chooseFeatures {
         border-radius: 0 0 10px 0;
         z-index: 333;
+      }
+      .panel__activeFeature{
+        border-radius: 0 0 10px 0;
       }
     }
 
@@ -61,37 +86,44 @@
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and(max-width: 767px){
   .searchingSection {
-    &__panel,
-    .panel {
-      width: 70%;
-      grid-template-columns: 100%;
-      grid-template-rows: repeat(2, 1fr);
+    .panel{
       text-align: center;
-      &__features {
-        border-radius: 0;
-        width: 80%;
-        margin: 0 auto 10px;
-        display: block;
-        margin: 0;
-      }
-      &__chooseFeatures {
-        border-radius: 0;
-      }
-      &__chooseFeature{
-        padding-left: 0;
+      width: 100%;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, 1fr);
+      .sorts{
+        grid-row-start: 3;
+        grid-column-start: 1;
+        grid-column-end: 1;
       }
       .filters{
-        margin: 0;
+        grid-row-start: 4;
+        grid-column-start: 1;
+        grid-column-end: 1;
+       
+      }
+      .filters, .sorts{
         border-radius: 0;
+        width: 70%;
+        margin: 10px auto 0;
+        display: block;
         .panel__chooseFeatures{
+          border-radius: 0;
+        }
+        .panel__activeFeature:hover,
+        .panel__activeFeature:focus
+        {
           border-radius: 0;
         }
       }
     }
   }
+  
+   
 }
+
 
 @media screen and (max-width: 425px) {
   .searchingSection {

@@ -1,0 +1,25 @@
+.panel__resetButton{
+    border: 1px solid #47526e;
+    background: #47526e;
+    padding: 5px 10px;
+    color: #fff;
+    border-top-right-radius: 10px;
+    transition: .3s;
+    margin-left: 5px;
+    &:hover,
+    &:focus{
+        background: #fff;
+        color:#47526e;
+        outline: none;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .panel__resetButton{
+        grid-row-start: 2;
+        margin-left: 0;
+        border-radius: 0;
+        width: 70%;
+        margin: auto;
+    }
+}

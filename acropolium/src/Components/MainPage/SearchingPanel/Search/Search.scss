@@ -2,22 +2,31 @@
   &__search {
     position: relative;
     grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column-end: 4;
   }
   &__input {
     width: 500px;
     padding: 5px 10px;
     outline: none;
-    border-radius: 10px 10px 0 0;
+    border-radius: 10px 0 0 0;
     border: 1px solid grey;
   }
 }
 
+@media screen and(max-width: 767px){
+  .panel {
+    &__input {
+      width: 100%;
+      border-radius: 0;
+    }
+  }
+  
+  
+}
+
+
 @media screen and (max-width: 500px) {
   .panel {
-    width: 70%;
-    grid-template-columns: 100%;
-    grid-template-rows: repeat(2, 1fr);
     &__search {
       grid-column-end: 1;
     }

@@ -20,9 +20,9 @@ export const Filters = ({
 	<div
 		className={`panel__features filters ${visibleFilters ? 'noRadius' : ''}`}
 	>
-		<div className='panel__activeFeatures' onClick={() => toggleFilters()}>
+		<button className='panel__activeFeature' onClick={() => toggleFilters()}>
 			filters by{filter ? ` ${filter}` : '...'}
-		</div>
+		</button>
 		{visibleFilters && (
 			<div className='panel__chooseFeatures'>
 				{filters.map(({ id, header, name }) =>

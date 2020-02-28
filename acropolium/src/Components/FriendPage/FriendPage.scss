@@ -47,9 +47,7 @@
     &__avatar {
       width: auto;
     }
-    &__title,
-    &__name,
-    &__info,
+    &__content,
     &__text {
       text-align: center;
     }
@@ -58,7 +56,7 @@
 }
 
 @media screen and (max-width: 375px) {
-  .friendPage .avatar {
+  .friendPage__avatar {
     width: 100%;
   }
 }

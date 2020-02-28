@@ -1,11 +1,11 @@
-.ldsEllipsis {
+.preloader {
   display: block;
   margin: auto;
   position: relative;
   width: 80px;
   height: 80px;
 }
-.ldsEllipsis div {
+.preloader .preloader__element {
   position: absolute;
   top: 33px;
   width: 13px;
@@ -14,19 +14,19 @@
   background: #000;
   animation-timing-function: cubic-bezier(0, 1, 1, 0);
 }
-.ldsEllipsis div:nth-child(1) {
+.preloader .preloader__element:nth-child(1) {
   left: 8px;
   animation: ldsEllipsis1 0.6s infinite;
 }
-.ldsEllipsis div:nth-child(2) {
+.preloader .preloader__element:nth-child(2) {
   left: 8px;
   animation: ldsEllipsis2 0.6s infinite;
 }
-.ldsEllipsis div:nth-child(3) {
+.preloader .preloader__element:nth-child(3) {
   left: 32px;
   animation: ldsEllipsis2 0.6s infinite;
 }
-.ldsEllipsis div:nth-child(4) {
+.preloader .preloader__element:nth-child(4) {
   left: 56px;
   animation: ldsEllipsis3 0.6s infinite;
 }

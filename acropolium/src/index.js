@@ -1,22 +1,23 @@
-import React, { useEffect } from "react";
-import ReactDOM from "react-dom";
-import { BrowserRouter, useLocation } from "react-router-dom";
-import App from "./App";
+import React, { useEffect } from 'react'
+import ReactDOM from 'react-dom'
+import { BrowserRouter, useLocation } from 'react-router-dom'
+
+import HOCForApi from './HOCForApi'
 
 function ScrollToTop() {
-  const { pathname } = useLocation();
+	const { pathname } = useLocation()
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+	useEffect(() => {
+		window.scrollTo(0, 0)
+	}, [pathname])
 
-  return null;
+	return null
 }
 
 ReactDOM.render(
-  <BrowserRouter>
-    <ScrollToTop />
-    <App />
-  </BrowserRouter>,
-  document.getElementById("root")
-);
+	<BrowserRouter>
+		<ScrollToTop />
+		<HOCForApi />
+	</BrowserRouter>,
+	document.getElementById('root')
+)
