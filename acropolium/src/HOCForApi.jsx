@@ -63,19 +63,11 @@ const HOCForApi = Component =>
 		}
 
 		getMoreFriendswithoutScroll = () => {
-			let scrollHeight = Math.max(
-				document.body.scrollHeight,
-				document.documentElement.scrollHeight,
-				document.body.offsetHeight,
-				document.documentElement.offsetHeight,
-				document.body.clientHeight,
-				document.documentElement.clientHeight
-			)
-
 			const timer = setInterval(
 				() =>
 					this.state.page < 6
-						? window.innerHeight === scrollHeight && this.getMoreFriends()
+						? window.innerHeight === document.body.scrollHeight &&
+						  this.getMoreFriends()
 						: clearInterval(timer),
 				200
 			)
