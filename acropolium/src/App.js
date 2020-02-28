@@ -38,11 +38,11 @@ class App extends React.Component {
 				</header>
 				<Switch>
 					<Route
-						path={process.env.PUBLIC_URL + '/friend/'}
+						path={'/friend/'}
 						render={() => <WithUrlDataWrapComponent />}
 					/>
 					<Route
-						path={process.env.PUBLIC_URL + '/'}
+						path={'/'}
 						render={() => (
 							<MainPage
 								friends={friends}

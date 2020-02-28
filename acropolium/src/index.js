@@ -14,7 +14,7 @@ function ScrollToTop() {
 }
 
 ReactDOM.render(
-	<BrowserRouter>
+	<BrowserRouter basename={process.env.PUBLIC_URL}>
 		<ScrollToTop />
 		<HOCForApi />
 	</BrowserRouter>,
