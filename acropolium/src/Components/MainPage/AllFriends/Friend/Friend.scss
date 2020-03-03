@@ -31,10 +31,14 @@
   &__avatarWrap {
     width: 100px;
     overflow: hidden;
+    position: relative;
   }
 
   &__avatar {
-    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    height: 100%;
   }
 
   &__contentWrap {
@@ -46,7 +50,8 @@
     font-size: 23px;
   }
   &__info {
-    margin: 0 0 5px;
+    margin: 0;
+    font-size: 14px;
   }
 }
 

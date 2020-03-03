@@ -11,21 +11,29 @@ const HOCForGetFriend = Component =>
 				isFetching: true,
 			}
 		}
+
 		getFriend = async () => {
-			let {
-				location: { pathname },
-			} = this.props
+			try {
+				let {
+					location: { pathname },
+				} = this.props
 
-			let friendIndex = pathname.substr(
-				Array.from(pathname.matchAll(/\//g))[1].index + 1
-			)
+				let friendIndex = pathname.substr(
+					Array.from(pathname.matchAll(/\//g))[1].index + 1
+				)
 
-			let request = await fetch(
-				`https://cors-anywhere.herokuapp.com/https://rickandmortyapi.com/api/character/${friendIndex}`
-			)
-			let res = await request.json()
+				let request = await fetch(
+					`https://cors-anywhere.herokuapp.com/https://rickandmortyapi.com/api/character/${friendIndex}`
+				)
+				let res = await request.json()
 
-			this.setState({ friend: { ...res }, isFetching: false })
+				this.setState({ friend: { ...res }, isFetching: false })
+			} catch {
+				this.setState({ isFetching: false })
+				alert(
+					'Sorry something went wrong! Please refresh page and check your internet connection'
+				)
+			}
 		}
 
 		async componentDidMount() {

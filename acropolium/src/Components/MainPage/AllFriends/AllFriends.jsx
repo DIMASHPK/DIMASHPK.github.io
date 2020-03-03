@@ -11,7 +11,7 @@ export const AllFriends = ({
 	sortFriends,
 }) => {
 	let arrayOfFriends = friends
-		.sort((a, b) => sortFriends(a, b))
+		.sort(sortFriends)
 		.filter(
 			({ name, gender, status }) => filterBy(status, gender) && searchBy(name)
 		)
@@ -23,7 +23,7 @@ export const AllFriends = ({
 				<div className='row'>
 					{arrayOfFriends.length > 0 ? (
 						arrayOfFriends.map(
-							({ id, image, created, name, location, gender, status }, i) => (
+							({ id, image, created, name, location, gender, status }) => (
 								<React.Fragment key={id}>
 									<Friend
 										id={id}
@@ -40,7 +40,7 @@ export const AllFriends = ({
 						)
 					) : (
 						<h3 className={'allFriendsSection__noSuchFriends'}>
-							No such friends
+							{isFetching ? 'Please wait...' : 'No such friends'}
 						</h3>
 					)}
 				</div>

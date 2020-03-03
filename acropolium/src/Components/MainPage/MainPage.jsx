@@ -15,9 +15,9 @@ export class MainPage extends React.Component {
 			case 'name descending':
 				return a.name > b.name ? 1 : -1
 			case 'age ascending':
-				return a.created > b.created ? -1 : 1
-			case 'age descending':
 				return a.created > b.created ? 1 : -1
+			case 'age descending':
+				return a.created > b.created ? -1 : 1
 			default:
 				return a.created > b.created ? 1 : -1
 		}
@@ -54,6 +54,7 @@ export class MainPage extends React.Component {
 			getFilter,
 			resetAll,
 		} = this.props
+
 		return (
 			<>
 				<SearchingPanel

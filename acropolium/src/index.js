@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react'
 import ReactDOM from 'react-dom'
-import { BrowserRouter, useLocation } from 'react-router-dom'
-
-import HOCForApi from './HOCForApi'
+import { HashRouter, useLocation } from 'react-router-dom'
+import { FriendsWithUrlData } from './HOCForApi'
 
 function ScrollToTop() {
 	const { pathname } = useLocation()
@@ -15,9 +14,9 @@ function ScrollToTop() {
 }
 
 ReactDOM.render(
-	<BrowserRouter>
+	<HashRouter>
 		<ScrollToTop />
-		<HOCForApi />
-	</BrowserRouter>,
+		<FriendsWithUrlData />
+	</HashRouter>,
 	document.getElementById('root')
 )

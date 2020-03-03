@@ -24,7 +24,7 @@ class App extends React.Component {
 	resetAll = () => this.setState({ value: '', filter: '', sort: '' })
 
 	render() {
-		let { friends, isFetching } = this.props
+		let { friends, defaultFriends, isFetching } = this.props
 		let { value, filter, sort } = this.state
 
 		return (
@@ -42,10 +42,11 @@ class App extends React.Component {
 						render={() => <WithUrlDataWrapComponent />}
 					/>
 					<Route
-						path='/'
+						path={'/'}
 						render={() => (
 							<MainPage
 								friends={friends}
+								defaultFriends={defaultFriends}
 								isFetching={isFetching}
 								value={value}
 								handleChange={this.handleChange}
