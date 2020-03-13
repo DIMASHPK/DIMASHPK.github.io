@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="neonCalculate">
+      <div class="yourWordsWrap">
+        <div class="yourWordWrap">
+          <pre class="word">Ваш текст</pre>
+        </div>
+
+        <img class="yourWordBackground" src="./img/bg-loft.png" alt="loft" />
+      </div>
+      <div class="calculate">
+        <div class="getWord">
+          <h2 class="getWordTitle">Добавьте текст</h2>
+          <p class="getWordSubtitle">
+            Чтобы узнать стоимость Вашего изделия, Добавьте ваш собственный
+            текст и выбирите ширину слов. Если вы хотите ввести несколько слов
+            то пишите с новой строчки
+          </p>
+          <h3 class="getYourWordsTitle">Добавьте ваш собственный текст</h3>
+          <textarea
+            class="getYourWordsInput"
+            id=""
+            cols="30"
+            rows="3"
+          ></textarea>
+          <p></p>
+        </div>
+        <div class="getWidth">
+          <h3 class="getYourWordsWidth">Выбирите размер шрифта слова</h3>
+          <input
+            class="pickYourWidth"
+            type="range"
+            min="40"
+            max="150"
+            step="1"
+            value="0"
+            disabled
+          />
+          <p class="widthOfWords">Ваша размер: 40</p>
+        </div>
+        <div class="price">
+          <p class="priceInHrn">Ваша цена:</p>
+        </div>
+      </div>
+    </section>
+
+    <script src="./script/main.js"></script>
+  </body>
+</html>
