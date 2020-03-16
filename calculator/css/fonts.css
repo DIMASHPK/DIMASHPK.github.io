@@ -1,0 +1,45 @@
+@font-face {
+  font-family: "Katherine";
+  src: url("../fonts/katherine/katherine.eot");
+  src: url("../fonts/katherine/katherine.eot");
+  src: url("../fonts/katherine/katherine.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/katherine/katherine.woff") format("woff"),
+    url("../fonts/katherine/katherine.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "redis";
+  src: url("../fonts/redis/redis.eot");
+  src: url("../fonts/redis/redis.eot");
+  src: url("../fonts/redis/redis.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/redis/redis.woff") format("woff"),
+    url("../fonts/redis/redis.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "nickainley";
+  src: url("../fonts/nickainley/Nickainley-Normal.eot");
+  src: url("../fonts/nickainley/Nickainley-Normal.eot");
+  src: url("../fonts/nickainley/Nickainley-Normal.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/nickainley/Nickainley-Normal.woff") format("woff"),
+    url("../fonts/nickainley/Nickainley-Normal.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "realize";
+  src: url("../fonts/realize/realize.eot");
+  src: url("../fonts/realize/realize.eot");
+  src: url("../fonts/realize/realize.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/realize/realize.woff") format("woff"),
+    url("../fonts/realize/realize.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}

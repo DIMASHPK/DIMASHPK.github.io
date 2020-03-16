@@ -10,9 +10,10 @@ body {
   margin: 100px auto;
   background-color: #0c0c0c;
   justify-content: space-between;
-  height: 596px;
+  min-height: 596px;
   border-radius: 20px;
 }
+
 .yourWordsWrap {
   width: 63.6%;
   flex: 0 0 auto;
@@ -36,29 +37,27 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  height: 100%;
 }
 
 .yourWordWrap {
   position: relative;
-
   width: 90%;
+  height: 100%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 999;
-  font-size: 40px;
+  font-size: 20px;
   font-weight: 700;
   text-align: center;
 }
 
 .word {
-  text-shadow: 0 0 1px #2eeeff, 0 0 3px #66a6ff, 3px 3px 3px rgba(0, 0, 0, 0.05),
-    0 0 8px #3ef, 0 0 15px #3ef, 0 0 18px #3ef, 0 0 30px #99c4ff,
-    0 0 50px #80b5ff, 0 0 50px #66a6ff, 0 0 80px #4d97ff, 0 0 100px #38f,
-    0 0 130px #38f, 0 0 140px #38f, 0 0 150px #38f;
-  color: #3ef;
+  text-shadow: 0 0 5px #e5af13, 0 0 10px #e5af13, 0 0 20px #e5af13,
+    0 0 40px #e5af13, 0 0 80px #e5af13, 0 0 90px #e5af13, 0 0 100px #e5af13;
+  color: #e5af13;
   text-transform: uppercase;
-  display: inline-block;
   word-wrap: break-word;
 }
 
@@ -69,7 +68,7 @@ body {
   align-items: center;
   flex-direction: column;
   border-radius: 20px;
-  border: 3px solid #ff00ff;
+  border: 3px solid #e1e500;
   color: #fff;
 }
 
@@ -83,6 +82,87 @@ textarea {
   color: #fff;
 }
 
+.getFont {
+  width: 90%;
+  margin-bottom: 20px;
+}
+
+.fontsContent {
+  display: flex;
+  width: 100%;
+  height: 30px;
+  justify-content: space-between;
+}
+
+.fontsContent button {
+  border: 2px solid #e1e500;
+  background: none;
+  outline: none;
+  color: #e1e500;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.fontsContent button span {
+  transition: 0.3s;
+}
+
+.fontsContent button:hover span {
+  transform: translateX(50%);
+}
+
+.fontsContent button.prev:hover span {
+  transform: translateX(-50%);
+}
+
+.fonts {
+  display: inherit;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.fonts p {
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  margin: 0;
+  transition: 0.3s;
+  font-size: 20px;
+}
+
+#firstFont {
+  font-family: "Bad Script";
+}
+
+#secondFont {
+  font-family: "Didact Gothic";
+}
+
+#thirdFont {
+  font-family: "Arial";
+}
+
+#fourthFont {
+  font-family: "redis";
+}
+
+#fifthFont {
+  font-family: "nickainley";
+}
+
+#sixthFont {
+  font-family: "realize";
+}
+
+#seventhFont {
+  font-family: "Katherine";
+}
+
 .pickYourWidth {
   width: 100%;
 }
@@ -90,7 +170,7 @@ textarea {
 input[type="range"] {
   -webkit-appearance: none;
   margin: 18px 0;
-  width: 100%;
+  width: 90%;
 }
 input[type="range"]:focus {
   outline: none;
@@ -101,7 +181,7 @@ input[type="range"]::-webkit-slider-runnable-track {
   cursor: pointer;
   animate: 0.2s;
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  background: #ff00ff;
+  background: #e1e500;
   border-radius: 1.3px;
   border: 0.2px solid #010101;
 }
@@ -178,4 +258,41 @@ input[type="range"]:focus::-ms-fill-upper {
 .calculate h3 {
   color: #fff;
   font-size: 17px;
+}
+
+.colors {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 10px;
+  margin-bottom: 20px;
+}
+
+.colors .color {
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 991px) {
+  .neonCalculate {
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  .yourWordsWrap {
+    width: 100%;
+    height: 50%;
+  }
+  .yourWordBackground {
+    width: 100%;
+  }
+  .calculate {
+    margin-top: 20px;
+  }
+  textarea {
+    width: 90%;
+    height: 100px;
+  }
 }

@@ -2,41 +2,72 @@ let scrollLine = document.querySelector("input[type=range]");
 let widthOfWords = document.querySelector(".widthOfWords");
 let getWords = document.querySelector(".getYourWordsInput");
 let yourText = document.querySelector(".word");
-let getPrice = document.querySelector(".price p");
+let getPrice = document.querySelector(".getPrice p");
+let containerOfTextWidth = document.querySelector(".yourWordsWrap").offsetWidth;
+let newColor = document.querySelectorAll(".colors .color");
+let fonts = document.querySelectorAll(".fonts p");
+let prevFontButton = document.querySelector("button.prev");
+let nextFontButton = document.querySelector("button.next");
 let wordsForCalculate = "";
 let valueOfWidth = 40;
+let left = 0;
+let i = 0;
 
+/* change text color */
+newColor.forEach(color =>
+  color.addEventListener("click", ({ target }) => {
+    console.log(target.style.boxShadow);
+    yourText.style.textShadow = target.style.boxShadow;
+    yourText.style.color = target.style.background;
+  })
+);
+
+/* getText */
 getWords.oninput = ({ target: { value } }) => {
   yourText.innerHTML = value.length > 0 ? value : "Ваш текст";
   wordsForCalculate = value.replace(/\s/g, "");
   if (value.length > 0) {
     scrollLine.disabled = false;
+    yourText.style.fontSize = getSizeOfText();
   } else {
     scrollLine.value = 0;
     scrollLine.disabled = true;
-    widthOfWords.innerHTML = "Ваша ширина: " + 40;
+    widthOfWords.innerHTML = "Ваша ширина: " + 40 + "см";
     valueOfWidth = 40;
-    yourText.style.fontSize = 40 + "px";
+    yourText.style.fontSize = 20 + "px";
   }
 
   getSallary(wordsForCalculate);
 };
 
+/* positionFonts */
+fonts.forEach(font => {
+  font.style.left = left + "%";
+  left += 100;
+});
+
+/* changeFont */
+prevFontButton.addEventListener("click", () => prevFont());
+nextFontButton.addEventListener("click", () => nextFont());
+
+/* getWidthOfText */
 scrollLine.oninput = ({ target: { value } }) => {
-  widthOfWords.innerHTML = "Ваша ширина: " + value;
+  widthOfWords.innerHTML = "Ваша ширина: " + value + "см";
+  console.log();
   valueOfWidth = value;
-  yourText.style.fontSize = value + "px";
+  yourText.style.fontSize = getSizeOfText();
+
   getSallary(wordsForCalculate);
 };
 
+/* getPriceOfText */
 function getSallary(word) {
   if (word.length > 0) {
     /* formuls for take sallery of neonWords */
-
     let widthOfOneLetter = (valueOfWidth - 4) / word.length;
 
     let valueOfHeightAndLengthOfNeonKoof = heightAndcommonLengthsOfNeonKoof();
-
+    console.log(valueOfHeightAndLengthOfNeonKoof);
     let square =
       ((valueOfHeightAndLengthOfNeonKoof.height + 4) * valueOfWidth) / 10000;
 
@@ -157,10 +188,130 @@ function getSallary(word) {
           height: 25,
           neonkoof: 0.455394736842105
         };
-      } else {
+      } /* new */ else if (widthOfOneLetter <= 16.6) {
         return {
-          height: 9,
-          neonkoof: 0.164035087719298
+          height: 26,
+          neonkoof: 0.474
+        };
+      } else if (widthOfOneLetter <= 17.3) {
+        return {
+          height: 27,
+          neonkoof: 0.492
+        };
+      } else if (widthOfOneLetter <= 17.9) {
+        return {
+          height: 28,
+          neonkoof: 0.51
+        };
+      } else if (widthOfOneLetter <= 18.6) {
+        return {
+          height: 29,
+          neonkoof: 0.529
+        };
+      } else if (widthOfOneLetter <= 19.2) {
+        return {
+          height: 30,
+          neonkoof: 0.547
+        };
+      } else if (widthOfOneLetter <= 19.8) {
+        return {
+          height: 31,
+          neonkoof: 0.565
+        };
+      } else if (widthOfOneLetter <= 20.5) {
+        return {
+          height: 32,
+          neonkoof: 0.583
+        };
+      } else if (widthOfOneLetter <= 21.1) {
+        return {
+          height: 33,
+          neonkoof: 0.601
+        };
+      } else if (widthOfOneLetter <= 21.8) {
+        return {
+          height: 34,
+          neonkoof: 0.62
+        };
+      } else if (widthOfOneLetter <= 22.4) {
+        return {
+          height: 35,
+          neonkoof: 0.638
+        };
+      } else if (widthOfOneLetter <= 23.1) {
+        return {
+          height: 36,
+          neonkoof: 0.656
+        };
+      } else if (widthOfOneLetter <= 23.7) {
+        return {
+          height: 37,
+          neonkoof: 0.675
+        };
+      } else if (widthOfOneLetter <= 24.3) {
+        return {
+          height: 38,
+          neonkoof: 0.692
+        };
+      } else if (widthOfOneLetter <= 25.0) {
+        return {
+          height: 39,
+          neonkoof: 0.711
+        };
+      } else if (widthOfOneLetter <= 25.6) {
+        return {
+          height: 40,
+          neonkoof: 0.728
+        };
+      } else if (widthOfOneLetter <= 26.2) {
+        return {
+          height: 41,
+          neonkoof: 0.747
+        };
+      } else if (widthOfOneLetter <= 26.6) {
+        return {
+          height: 42,
+          neonkoof: 0.765
+        };
+      } else if (widthOfOneLetter <= 27.6) {
+        return {
+          height: 43,
+          neonkoof: 0.785
+        };
+      } else if (widthOfOneLetter <= 28.2) {
+        return {
+          height: 44,
+          neonkoof: 0.802
+        };
+      } else if (widthOfOneLetter <= 28.8) {
+        return {
+          height: 45,
+          neonkoof: 0.821
+        };
+      } else if (widthOfOneLetter <= 29.4) {
+        return {
+          height: 46,
+          neonkoof: 0.838
+        };
+      } else if (widthOfOneLetter <= 30.1) {
+        return {
+          height: 47,
+          neonkoof: 0.857
+        };
+      } else if (widthOfOneLetter <= 30.7) {
+        return {
+          height: 48,
+          neonkoof: 0.875
+        };
+      } else if (widthOfOneLetter <= 31.4) {
+        return {
+          height: 49,
+          neonkoof: 0.893
+        };
+      } else if (widthOfOneLetter <= 31.9) {
+        return {
+          height: 50,
+          neonkoof: 0.909
         };
       }
     }
@@ -200,5 +351,49 @@ function getSallary(word) {
     }
   } else {
     getPrice.innerHTML = "Ваша цена:";
+  }
+}
+
+/* getSizeOfText */
+function getSizeOfText() {
+  let widthOfWords =
+    wordsForCalculate.length > 10
+      ? wordsForCalculate.length / 2
+      : wordsForCalculate.length;
+
+  let textSize =
+    Math.round(((containerOfTextWidth / widthOfWords) * valueOfWidth) / 200) +
+    "px";
+
+  return wordsForCalculate.length > 2 ? textSize : 20 + "px";
+}
+
+/* getFont */
+function nextFont() {
+  fonts[i].style.left = +fonts[i].style.left[0] + -100 + "%";
+  fonts[i + 1].style.left = 0 + "%";
+  i++;
+  disabledButton(nextFontButton, prevFontButton);
+  activeFont();
+}
+
+function prevFont() {
+  fonts[i].style.left = +fonts[i].style.left[0] + 100 + "%";
+  fonts[i - 1].style.left = 0 + "%";
+  i--;
+  disabledButton(nextFontButton, prevFontButton);
+  activeFont();
+  console.log(i);
+}
+
+function disabledButton(nextButton, prevButton) {
+  nextButton.disabled = i === fonts.length - 1;
+  prevButton.disabled = i === 0;
+}
+
+function activeFont() {
+  for (let i = 0; i < fonts.length; i++) {
+    fonts[i].style.left === "0%" &&
+      (yourText.style.fontFamily = fonts[i].style.fontFamily);
   }
 }

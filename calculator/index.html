@@ -3,8 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/fonts.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Bad+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/style.css" />
@@ -14,7 +23,7 @@
     <section class="neonCalculate">
       <div class="yourWordsWrap">
         <div class="yourWordWrap">
-          <pre class="word">Ваш текст</pre>
+          <p class="word">Ваш текст</p>
         </div>
 
         <img class="yourWordBackground" src="./img/bg-loft.png" alt="loft" />
@@ -23,9 +32,7 @@
         <div class="getWord">
           <h2 class="getWordTitle">Добавьте текст</h2>
           <p class="getWordSubtitle">
-            Чтобы узнать стоимость Вашего изделия, Добавьте ваш собственный
-            текст и выбирите ширину слов. Если вы хотите ввести несколько слов
-            то пишите с новой строчки
+            Какой-то текст
           </p>
           <h3 class="getYourWordsTitle">Добавьте ваш собственный текст</h3>
           <textarea
@@ -36,8 +43,27 @@
           ></textarea>
           <p></p>
         </div>
+
+        <div class="getFont">
+          <h3>Change fonts</h3>
+          <div class="fontsContent">
+            <button class="prev"><span>&#8249;</span></button>
+            <div class="fonts">
+              <p id="firstFont">Bad Script</p>
+              <p id="secondFont">Didact Gothic</p>
+              <p id="thirdFont">Arial</p>
+              <p id="fourthFont">Redis</p>
+              <p id="fifthFont">Nickainley</p>
+              <p id="sixthFont">Realize</p>
+              <p id="seventhFont">Katherine</p>
+            </div>
+            <button class="next"><span>&#8250;</span></button>
+          </div>
+        </div>
         <div class="getWidth">
-          <h3 class="getYourWordsWidth">Выбирите размер шрифта слова</h3>
+          <h3 class="getYourWordsWidth">
+            Выбирите размер шрифта слова перетаскивая ползунок
+          </h3>
           <input
             class="pickYourWidth"
             type="range"
@@ -47,10 +73,71 @@
             value="0"
             disabled
           />
-          <p class="widthOfWords">Ваша размер: 40</p>
+          <p class="widthOfWords">Ваша размер: 40см</p>
         </div>
-        <div class="price">
+        <div class="getPrice">
           <p class="priceInHrn">Ваша цена:</p>
+        </div>
+        <div class="getColors">
+          <h3>Выберите цвет</h3>
+          <div class="colors">
+            <div
+              id="firstColor"
+              class="color"
+              style="background: #e5221b;
+          box-shadow: 0 0 5px #e5221b, 0 0 10px #e5221b, 0 0 20px #e5221b,
+            0 0 40px #e5221b, 0 0 80px #e5221b, 0 0 90px #e5221b, 0 0 100px #e5221b;"
+            ></div>
+            <div
+              id="secondColor"
+              class="color"
+              style="background: #e5af13;
+          box-shadow: 0 0 5px #e5af13, 0 0 10px #e5af13, 0 0 20px #e5af13,
+            0 0 40px #e5af13, 0 0 80px #e5af13, 0 0 90px #e5af13, 0 0 100px #e5af13;"
+            ></div>
+            <div
+              id="thirdColor"
+              class="color"
+              style="background: #18e4e3;
+          box-shadow: 0 0 5px #18e4e3, 0 0 10px #18e4e3, 0 0 20px #18e4e3,
+            0 0 40px #18e4e3, 0 0 80px #18e4e3, 0 0 90px #18e4e3, 0 0 100px #18e4e3;"
+            ></div>
+            <div
+              id="fourthColor"
+              class="color"
+              style="background: #c5dc16;
+          box-shadow: 0 0 5px #c5dc16, 0 0 10px #c5dc16, 0 0 20px #c5dc16,
+            0 0 40px #c5dc16, 0 0 80px #c5dc16, 0 0 90px #c5dc16, 0 0 100px #c5dc16;"
+            ></div>
+            <div
+              id="fifthColor"
+              class="color"
+              style="background: #e515e5;
+          box-shadow: 0 0 5px #e515e5, 0 0 10px #e515e5, 0 0 20px #e515e5,
+            0 0 40px #e515e5, 0 0 80px #e515e5, 0 0 90px #e515e5, 0 0 100px #e515e5;"
+            ></div>
+            <div
+              id="sixthColor"
+              class="color"
+              style="background: #e5e5e5;
+          box-shadow: 0 0 5px #e5e5e5, 0 0 10px #e5e5e5, 0 0 20px #e5e5e5,
+            0 0 40px #e5e5e5, 0 0 80px #e5e5e5, 0 0 90px #e5e5e5, 0 0 100px #e5e5e5;"
+            ></div>
+            <div
+              id="seventhColor"
+              class="color"
+              style="background: #b5acc9;
+          box-shadow: 0 0 5px #b5acc9, 0 0 10px #b5acc9, 0 0 20px #b5acc9,
+            0 0 40px #b5acc9, 0 0 80px #b5acc9, 0 0 90px #b5acc9, 0 0 100px;"
+            ></div>
+            <div
+              id="eighthColor"
+              class="color"
+              style="background: #e55d29;
+          box-shadow: 0 0 5px #e55d29, 0 0 10px #e55d29, 0 0 20px #e55d29,
+            0 0 40px #e55d29, 0 0 80px #e55d29, 0 0 90px #e55d29, 0 0 100px"
+            ></div>
+          </div>
         </div>
       </div>
     </section>
