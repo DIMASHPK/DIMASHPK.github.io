@@ -71,11 +71,16 @@ body {
   border: 3px solid #e1e500;
   color: #fff;
 }
+.getWord {
+  width: 100%;
+}
 
 textarea {
   border: 2px solid white;
   background: black;
   color: white;
+  padding: 5px;
+  width: 86%;
 }
 
 .widthOfWords {
@@ -148,15 +153,15 @@ textarea {
 }
 
 #fourthFont {
-  font-family: "redis";
+  font-family: "Redis";
 }
 
 #fifthFont {
-  font-family: "nickainley";
+  font-family: "Nickainley";
 }
 
 #sixthFont {
-  font-family: "realize";
+  font-family: "Realize";
 }
 
 #seventhFont {
@@ -272,11 +277,14 @@ input[type="range"]:focus::-ms-fill-upper {
   cursor: pointer;
   height: 40px;
   width: 40px;
-  border-radius: 20px;
+  border: 2px solid grey;
   transition: 0.3s;
 }
 
 @media screen and (max-width: 991px) {
+  body {
+    font-family: "Arial", cursive;
+  }
   .neonCalculate {
     flex-direction: column;
     margin: 0 auto;

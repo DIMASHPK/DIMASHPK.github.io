@@ -16,9 +16,9 @@ let i = 0;
 /* change text color */
 newColor.forEach(color =>
   color.addEventListener("click", ({ target }) => {
-    console.log(target.style.boxShadow);
-    yourText.style.textShadow = target.style.boxShadow;
-    yourText.style.color = target.style.background;
+    yourText.style.textShadow = `0 0 5px ${target.dataset.color}, 0 0 10px ${target.dataset.color}, 0 0 20px ${target.dataset.color},
+    0 0 40px ${target.dataset.color}, 0 0 80px ${target.dataset.color}, 0 0 90px ${target.dataset.color}, 0 0 100px ${target.dataset.color}`;
+    yourText.style.color = target.dataset.color;
   })
 );
 
@@ -378,12 +378,15 @@ function nextFont() {
 }
 
 function prevFont() {
-  fonts[i].style.left = +fonts[i].style.left[0] + 100 + "%";
-  fonts[i - 1].style.left = 0 + "%";
-  i--;
+  if (i !== 0) {
+    fonts[i].style.left = +fonts[i].style.left[0] + 100 + "%";
+    fonts[i - 1].style.left = 0 + "%";
+
+    i--;
+  }
+
   disabledButton(nextFontButton, prevFontButton);
   activeFont();
-  console.log(i);
 }
 
 function disabledButton(nextButton, prevButton) {
@@ -393,7 +396,8 @@ function disabledButton(nextButton, prevButton) {
 
 function activeFont() {
   for (let i = 0; i < fonts.length; i++) {
+    console.log(fonts[i].style.fontFamily);
     fonts[i].style.left === "0%" &&
-      (yourText.style.fontFamily = fonts[i].style.fontFamily);
+      (yourText.style.fontFamily = fonts[i].innerHTML);
   }
 }
