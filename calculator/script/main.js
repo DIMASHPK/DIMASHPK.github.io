@@ -370,21 +370,23 @@ function getSizeOfText() {
 
 /* getFont */
 function nextFont() {
-  fonts[i].style.left = +fonts[i].style.left[0] + -100 + "%";
-  fonts[i + 1].style.left = 0 + "%";
+  for (let k = 0; k < fonts.length; k++) {
+    let [percent] = fonts[k].style.left.split("%");
+    fonts[k].style.left = +percent + -100 + "%";
+  }
   i++;
   disabledButton(nextFontButton, prevFontButton);
   activeFont();
 }
 
 function prevFont() {
+  for (let k = 0; k < fonts.length; k++) {
+    let [percent] = fonts[k].style.left.split("%");
+    fonts[k].style.left = +percent + 100 + "%";
+  }
   if (i !== 0) {
-    fonts[i].style.left = +fonts[i].style.left[0] + 100 + "%";
-    fonts[i - 1].style.left = 0 + "%";
-
     i--;
   }
-
   disabledButton(nextFontButton, prevFontButton);
   activeFont();
 }
