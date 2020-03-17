@@ -3,6 +3,7 @@ let widthOfWords = document.querySelector(".widthOfWords");
 let getWords = document.querySelector(".getYourWordsInput");
 let yourText = document.querySelector(".word");
 let getPrice = document.querySelector(".getPrice p");
+let overPrice = document.querySelector(".getPrice p.overPrice");
 let containerOfTextWidth = document.querySelector(".yourWordsWrap").offsetWidth;
 let newColor = document.querySelectorAll(".colors .color");
 let fonts = document.querySelectorAll(".fonts p");
@@ -34,8 +35,11 @@ getWords.oninput = ({ target: { value } }) => {
   yourText.innerHTML = value.length > 0 ? value : "Ваш текст";
   wordsForCalculate = value.replace(/\s/g, "");
   if (value.length > 0) {
-    scrollLine.disabled = false;
     yourText.style.fontSize = getSizeOfText();
+    let minValue = Math.round(value.length * 5.1);
+    scrollLine.min = minValue;
+    scrollLine.value = minValue;
+    widthOfWords.innerHTML = "Ваша ширина: " + minValue + "см";
   } else {
     scrollLine.value = 0;
     widthOfWords.innerHTML = "Ваша ширина: " + 40 + "см";
@@ -105,7 +109,10 @@ function getSallary(word) {
 
     let sallaryInHrn = sallary * 26.8;
     getPrice.innerHTML = "Ваша цена: " + Math.round(sallaryInHrn) + "грн";
-
+    overPrice.innerHTML =
+      heightAndcommonLengthsOfNeonKoof().bigger === "bigger"
+        ? "Вы достигли максимума в 50 см высоты на одну букву, для просчетов в большем размере обратитесь к менеджеру"
+        : "";
     /* tables of value */
     function heightAndcommonLengthsOfNeonKoof() {
       if (widthOfOneLetter <= 6.4) {
@@ -313,6 +320,8 @@ function getSallary(word) {
           height: 50,
           neonkoof: 0.909
         };
+      } else if (widthOfOneLetter > 31.9) {
+        return { bigger: "bigger", height: 9, neonkoof: 0.164035087719298 };
       } else {
         return {
           height: 9,
@@ -409,9 +418,20 @@ function disabledButton(nextButton, prevButton) {
 
 function activeFont() {
   for (let i = 0; i < fonts.length; i++) {
-    console.log(fonts[i].style.fontFamily);
-    fonts[i].style.left === "0%" &&
-      fonts[i].innerHTML !== "Выбирите шрифт" &&
-      (yourText.style.fontFamily = fonts[i].innerHTML);
+    if (
+      (fonts[i].innerHTML === "Выбирите шрифт" &&
+        fonts[i].style.left === "0%") ||
+      (fonts[i].innerHTML === "больше у нашего дизайнера" &&
+        fonts[i].style.left === "0%")
+    ) {
+      yourText.style.fontFamily = "Arial";
+    } else if (
+      (fonts[i].innerHTML !== "Выбирите шрифт" &&
+        fonts[i].style.left === "0%") ||
+      (fonts[i].innerHTML !== "больше у нашего дизайнера" &&
+        fonts[i].style.left === "0%")
+    ) {
+      yourText.style.fontFamily = fonts[i].innerHTML;
+    }
   }
 }

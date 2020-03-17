@@ -85,6 +85,11 @@ textarea {
   margin-top: 20px;
 }
 
+textarea::placeholder {
+  color: #fff;
+  font-size: 18px;
+}
+
 .widthOfWords {
   color: #fff;
 }
@@ -166,7 +171,7 @@ textarea {
 }
 
 #fifthFont {
-  font-family: "Nickainley";
+  font-family: "Havana";
 }
 
 #sixthFont {
@@ -299,6 +304,11 @@ input[type="range"]:focus::-ms-fill-upper {
   text-shadow: rgb(226, 228, 33) 0px 0px 5px, rgb(226, 228, 33) 0px 0px 10px;
   color: rgb(226, 228, 33);
   font-size: 25px;
+}
+
+.overPrice {
+  text-shadow: rgb(226, 228, 33) 0px 0px 5px, rgb(226, 228, 33) 0px 0px 10px;
+  color: rgb(226, 228, 33);
 }
 
 @media screen and (max-width: 991px) {

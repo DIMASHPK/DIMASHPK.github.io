@@ -10,13 +10,79 @@
 }
 
 @font-face {
-  font-family: "Nickainley";
-  src: url("../fonts/nickainley/Nickainley-Normal.eot");
-  src: url("../fonts/nickainley/Nickainley-Normal.eot");
-  src: url("../fonts/nickainley/Nickainley-Normal.eot?#iefix")
+  font-family: "Realize";
+  src: url("../fonts/realize/realize.eot");
+  src: url("../fonts/realize/realize.eot");
+  src: url("../fonts/realize/realize.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/realize/realize.woff") format("woff"),
+    url("../fonts/realize/realize.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Realize";
+  src: url("../fonts/realize/realize.eot");
+  src: url("../fonts/realize/realize.eot");
+  src: url("../fonts/realize/realize.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/realize/realize.woff") format("woff"),
+    url("../fonts/realize/realize.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Havana";
+  src: url("../fonts/havana/havana.oet");
+  src: url("../fonts/havana/havana.eot");
+  src: url("../fonts/havana/havana.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/havana/havana.woff") format("woff"),
+    url("../fonts/havana/havana.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Amatic";
+  src: url("../fonts/amatic/AmaticSC-Regular.eot");
+  src: url("../fonts/amatic/AmaticSC-Regular.eot");
+  src: url("../fonts/amatic/AmaticSC-Regular.eot?#iefix")
       format("embedded-opentype"),
-    url("../fonts/nickainley/Nickainley-Normal.woff") format("woff"),
-    url("../fonts/nickainley/Nickainley-Normal.ttf") format("truetype");
+    url("../fonts/amatic/AmaticSC-Regular.woff") format("woff"),
+    url("../fonts/amatic/AmaticSC-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Cramaten";
+  src: url("../fonts/cramaten/cramaten.eot");
+  src: url("../fonts/cramaten/cramaten.eot");
+  src: url("../fonts/cramaten/cramaten.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/cramaten/cramaten.woff") format("woff"),
+    url("../fonts/cramaten/cramaten.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Realize";
+  src: url("../fonts/realize/realize.eot");
+  src: url("../fonts/realize/realize.eot");
+  src: url("../fonts/realize/realize.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/realize/realize.woff") format("woff"),
+    url("../fonts/realize/realize.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Realize";
+  src: url("../fonts/realize/realize.eot");
+  src: url("../fonts/realize/realize.eot");
+  src: url("../fonts/realize/realize.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/realize/realize.woff") format("woff"),
+    url("../fonts/realize/realize.ttf") format("truetype");
   font-style: normal;
   font-weight: 400;
 }
