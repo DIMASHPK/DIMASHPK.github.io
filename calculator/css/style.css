@@ -76,7 +76,7 @@ body {
 }
 
 textarea {
-  border: 2px solid white;
+  border: 2px solid #e1e500;
   background: black;
   color: white;
   padding: 5px;
@@ -121,6 +121,13 @@ textarea {
 
 .fontsContent button.prev:hover span {
   transform: translateX(-50%);
+}
+
+.fontsContent button:disabled {
+  border-color: #fff;
+}
+.fontsContent button:disabled span {
+  color: #fff;
 }
 
 .fonts {
