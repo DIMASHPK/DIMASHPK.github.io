@@ -178,6 +178,26 @@ textarea::placeholder {
   font-family: "Realize";
 }
 
+#seventhFont {
+  font-family: "Amatic";
+}
+
+#eigthFont {
+  font-family: "Cramaten";
+}
+
+#ninethFont {
+  font-family: "Fifa";
+}
+
+#tenthFont {
+  font-family: "Michroma";
+}
+
+#eleventhFont {
+  font-family: "Verbena";
+}
+
 .pickYourWidth {
   width: 100%;
 }

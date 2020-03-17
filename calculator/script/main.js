@@ -46,6 +46,7 @@ getWords.oninput = ({ target: { value } }) => {
     valueOfWidth = 40;
     yourText.style.fontSize = 20 + "px";
   }
+  value < 1 && (overPrice.innerHTML = "");
 
   getSallary(wordsForCalculate);
 };
@@ -55,8 +56,7 @@ scrollLine.oninput = ({ target: { value } }) => {
   widthOfWords.innerHTML = "Ваша ширина: " + value + "см";
   valueOfWidth = value;
   yourText.style.fontSize = getSizeOfText();
-
-  getSallary(wordsForCalculate);
+  wordsForCalculate.length > 0 && getSallary(wordsForCalculate);
 };
 
 /* positionFonts */
@@ -110,7 +110,8 @@ function getSallary(word) {
     let sallaryInHrn = sallary * 26.8;
     getPrice.innerHTML = "Ваша цена: " + Math.round(sallaryInHrn) + "грн";
     overPrice.innerHTML =
-      heightAndcommonLengthsOfNeonKoof().bigger === "bigger"
+      heightAndcommonLengthsOfNeonKoof().bigger === "bigger" &&
+      wordsForCalculate.length > 0
         ? "Вы достигли максимума в 50 см высоты на одну букву, для просчетов в большем размере обратитесь к менеджеру"
         : "";
     /* tables of value */
