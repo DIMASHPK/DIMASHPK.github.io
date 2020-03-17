@@ -54,11 +54,12 @@ body {
 }
 
 .word {
-  text-shadow: 0 0 5px #e5af13, 0 0 10px #e5af13, 0 0 20px #e5af13,
-    0 0 40px #e5af13, 0 0 80px #e5af13, 0 0 90px #e5af13, 0 0 100px #e5af13;
-  color: #e5af13;
+  text-shadow: 0 0 5px #c5dc16, 0 0 10px #c5dc16, 0 0 20px #c5dc16,
+    0 0 40px #c5dc16, 0 0 80px #c5dc16, 0 0 90px #c5dc16, 0 0 100px #c5dc16;
+  color: #c5dc16;
   text-transform: uppercase;
   word-wrap: break-word;
+  font-family: "Bad Script";
 }
 
 .calculate {
@@ -81,6 +82,7 @@ textarea {
   color: white;
   padding: 5px;
   width: 86%;
+  margin-top: 20px;
 }
 
 .widthOfWords {
@@ -169,10 +171,6 @@ textarea {
 
 #sixthFont {
   font-family: "Realize";
-}
-
-#seventhFont {
-  font-family: "Katherine";
 }
 
 .pickYourWidth {
@@ -272,20 +270,35 @@ input[type="range"]:focus::-ms-fill-upper {
   font-size: 17px;
 }
 
+.getColors {
+  width: 95%;
+}
+
 .colors {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-gap: 10px;
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 20px;
 }
 
 .colors .color {
   cursor: pointer;
-  height: 40px;
-  width: 40px;
+  height: 20px;
+  width: 20px;
   border: 2px solid grey;
   transition: 0.3s;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.colors .color:hover,
+.colors .active {
+  transform: scale(1.5);
+}
+
+.priceInHrn {
+  text-shadow: rgb(226, 228, 33) 0px 0px 5px, rgb(226, 228, 33) 0px 0px 10px;
+  color: rgb(226, 228, 33);
+  font-size: 25px;
 }
 
 @media screen and (max-width: 991px) {

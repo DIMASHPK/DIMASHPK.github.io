@@ -30,7 +30,6 @@
       </div>
       <div class="calculate">
         <div class="getWord">
-          <h2 class="getWordTitle">Добавьте текст</h2>
           <textarea
             class="getYourWordsInput"
             id=""
@@ -40,36 +39,34 @@
           ></textarea>
           <p></p>
         </div>
+        <div class="getWidth">
+          <h3 class="getYourWordsWidth">
+            Выберите размер - потяните ползунок
+          </h3>
+          <input
+            class="pickYourWidth"
+            type="range"
+            min="40"
+            max="300"
+            step="1"
+            value="0"
+          />
+          <p class="widthOfWords">Ваша размер: 40см</p>
+        </div>
         <div class="getFont">
-          <h3>Выбирите шрифт</h3>
           <div class="fontsContent">
             <button class="prev" disabled><span>&#8249;</span></button>
             <div class="fonts">
+              <p id="firstFont">Выбирите шрифт</p>
               <p id="firstFont">Bad Script</p>
               <p id="secondFont">Didact Gothic</p>
               <p id="thirdFont">Arial</p>
               <p id="fourthFont">Redis</p>
               <p id="fifthFont">Nickainley</p>
               <p id="sixthFont">Realize</p>
-              <p id="seventhFont">Katherine</p>
             </div>
             <button class="next"><span>&#8250;</span></button>
           </div>
-        </div>
-        <div class="getWidth">
-          <h3 class="getYourWordsWidth">
-            Выбирите размер текста перетаскивая ползунок
-          </h3>
-          <input
-            class="pickYourWidth"
-            type="range"
-            min="40"
-            max="150"
-            step="1"
-            value="0"
-            disabled
-          />
-          <p class="widthOfWords">Ваша размер: 40см</p>
         </div>
         <div class="getColors">
           <h3>Выберите цвет</h3>
@@ -77,63 +74,83 @@
             <div
               id="firstColor"
               class="color"
-              data-color="#e5221b"
-              style="background: #e5221b;
-          box-shadow: 0 0 5px #e5221b;"
-            ></div>
-            <div
-              id="secondColor"
-              class="color"
-              data-color="#e5af13"
-              style="background: #e5af13;
-          box-shadow: 0 0 5px #e5af13;"
-            ></div>
-            <div
-              id="thirdColor"
-              class="color"
-              data-color="#18e4e3"
-              style="background: #18e4e3;
-          box-shadow: 0 0 5px #18e4e3;"
-            ></div>
-            <div
-              id="fourthColor"
-              class="color"
-              data-color="#c5dc16"
-              style="background: #c5dc16;
-          box-shadow: 0 0 5px #c5dc16;"
-            ></div>
-            <div
-              id="fifthColor"
-              class="color"
-              data-color="#e515e5"
-              style="background: #e515e5;
-          box-shadow: 0 0 5px #e515e5;"
-            ></div>
-            <div
-              id="sixthColor"
-              class="color"
               data-color="#e5e5e5"
               style="background: #e5e5e5;
           box-shadow: 0 0 5px #e5e5e5;"
             ></div>
             <div
-              id="seventhColor"
+              id="secondColor"
               class="color"
               data-color="#b5acc9"
               style="background: #b5acc9;
           box-shadow: 0 0 5px #b5acc9;"
             ></div>
             <div
-              id="eighthColor"
+              id="thirdColor"
+              class="color active"
+              data-color="#c5dc16"
+              style="background: #c5dc16;
+          box-shadow: 0 0 5px #c5dc16;"
+            ></div>
+            <div
+              id="fourthColor"
+              class="color"
+              data-color="#E2E421"
+              style="background: #E2E421;
+          box-shadow: 0 0 5px #E2E421;"
+            ></div>
+            <div
+              id="fifthColor"
               class="color"
               data-color="#e55d29"
               style="background: #e55d29;
           box-shadow: 0 0 5px #e55d29;"
             ></div>
+            <div
+              id="sixthColor"
+              class="color"
+              data-color="#e5221b"
+              style="background: #e5221b;
+          box-shadow: 0 0 5px #e5221b;"
+            ></div>
+            <div
+              id="seventhColor"
+              class="color"
+              data-color="#e515e5"
+              style="background: #e515e5;
+          box-shadow: 0 0 5px #e515e5;"
+            ></div>
+            <div
+              id="eighthColor"
+              class="color"
+              data-color="#18e4e3"
+              style="background: #18e4e3;
+          box-shadow: 0 0 5px #18e4e3;"
+            ></div>
+            <div
+              id="eighthColor"
+              class="color"
+              data-color="#0925E4"
+              style="background: #0925E4;
+          box-shadow: 0 0 5px #0925E4;"
+            ></div>
+            <div
+              id="eighthColor"
+              class="color"
+              data-color="#0ADE23"
+              style="background: #0ADE23;
+          box-shadow: 0 0 5px #0ADE23;"
+            ></div>
           </div>
         </div>
         <div class="getPrice">
           <p class="priceInHrn">Ваша цена:</p>
+          <p>
+            Онлайн расчет стоимости может иметь погрешность +- 15%. На этапе
+            создания макета Вы получите точную цену и детальный отчет по всем
+            параметрам, которые влияют на цену, что б иметь возможность влиять
+            на них.
+          </p>
         </div>
       </div>
     </section>

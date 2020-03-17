@@ -1,16 +1,4 @@
 @font-face {
-  font-family: "Katherine";
-  src: url("../fonts/katherine/katherine.eot");
-  src: url("../fonts/katherine/katherine.eot");
-  src: url("../fonts/katherine/katherine.eot?#iefix")
-      format("embedded-opentype"),
-    url("../fonts/katherine/katherine.woff") format("woff"),
-    url("../fonts/katherine/katherine.ttf") format("truetype");
-  font-style: normal;
-  font-weight: 400;
-}
-
-@font-face {
   font-family: "Redis";
   src: url("../fonts/redis/redis.eot");
   src: url("../fonts/redis/redis.eot");

@@ -14,13 +14,20 @@ let left = 0;
 let i = 0;
 
 /* change text color */
-newColor.forEach(color =>
+newColor.forEach(color => {
   color.addEventListener("click", ({ target }) => {
     yourText.style.textShadow = `0 0 5px ${target.dataset.color}, 0 0 10px ${target.dataset.color}, 0 0 20px ${target.dataset.color},
     0 0 40px ${target.dataset.color}, 0 0 80px ${target.dataset.color}, 0 0 90px ${target.dataset.color}, 0 0 100px ${target.dataset.color}`;
     yourText.style.color = target.dataset.color;
-  })
-);
+    newColor.forEach(color =>
+      color === target
+        ? color.classList.add("active")
+        : color.classList.remove("active")
+    );
+  });
+});
+
+wordsForCalculate = yourText.innerHTML.replace(/\s/g, "");
 
 /* getText */
 getWords.oninput = ({ target: { value } }) => {
@@ -31,11 +38,19 @@ getWords.oninput = ({ target: { value } }) => {
     yourText.style.fontSize = getSizeOfText();
   } else {
     scrollLine.value = 0;
-    scrollLine.disabled = true;
     widthOfWords.innerHTML = "Ваша ширина: " + 40 + "см";
     valueOfWidth = 40;
     yourText.style.fontSize = 20 + "px";
   }
+
+  getSallary(wordsForCalculate);
+};
+
+/* getWidthOfText */
+scrollLine.oninput = ({ target: { value } }) => {
+  widthOfWords.innerHTML = "Ваша ширина: " + value + "см";
+  valueOfWidth = value;
+  yourText.style.fontSize = getSizeOfText();
 
   getSallary(wordsForCalculate);
 };
@@ -49,16 +64,6 @@ fonts.forEach(font => {
 /* changeFont */
 prevFontButton.addEventListener("click", () => prevFont());
 nextFontButton.addEventListener("click", () => nextFont());
-
-/* getWidthOfText */
-scrollLine.oninput = ({ target: { value } }) => {
-  widthOfWords.innerHTML = "Ваша ширина: " + value + "см";
-  console.log();
-  valueOfWidth = value;
-  yourText.style.fontSize = getSizeOfText();
-
-  getSallary(wordsForCalculate);
-};
 
 /* getPriceOfText */
 function getSallary(word) {
@@ -103,12 +108,7 @@ function getSallary(word) {
 
     /* tables of value */
     function heightAndcommonLengthsOfNeonKoof() {
-      if (widthOfOneLetter <= 5.8) {
-        return {
-          height: 9,
-          neonkoof: 0.164035087719298
-        };
-      } else if (widthOfOneLetter <= 6.4) {
+      if (widthOfOneLetter <= 6.4) {
         return {
           height: 10,
           neonkoof: 0.181780701754386
@@ -188,7 +188,7 @@ function getSallary(word) {
           height: 25,
           neonkoof: 0.455394736842105
         };
-      } /* new */ else if (widthOfOneLetter <= 16.6) {
+      } else if (widthOfOneLetter <= 16.6) {
         return {
           height: 26,
           neonkoof: 0.474
@@ -313,6 +313,11 @@ function getSallary(word) {
           height: 50,
           neonkoof: 0.909
         };
+      } else {
+        return {
+          height: 9,
+          neonkoof: 0.164035087719298
+        };
       }
     }
 
@@ -360,10 +365,16 @@ function getSizeOfText() {
     wordsForCalculate.length > 10
       ? wordsForCalculate.length / 2
       : wordsForCalculate.length;
+  let divider = 200;
+
+  if (valueOfWidth > 150) {
+    divider = 400;
+  }
 
   let textSize =
-    Math.round(((containerOfTextWidth / widthOfWords) * valueOfWidth) / 200) +
-    "px";
+    Math.round(
+      ((containerOfTextWidth / widthOfWords) * valueOfWidth) / divider
+    ) + "px";
 
   return wordsForCalculate.length > 2 ? textSize : 20 + "px";
 }
@@ -400,6 +411,7 @@ function activeFont() {
   for (let i = 0; i < fonts.length; i++) {
     console.log(fonts[i].style.fontFamily);
     fonts[i].style.left === "0%" &&
+      fonts[i].innerHTML !== "Выбирите шрифт" &&
       (yourText.style.fontFamily = fonts[i].innerHTML);
   }
 }
