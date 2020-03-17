@@ -36,7 +36,7 @@ getWords.oninput = ({ target: { value } }) => {
   wordsForCalculate = value.replace(/\s/g, "");
   if (value.length > 0) {
     yourText.style.fontSize = getSizeOfText();
-    let minValue = Math.round(value.length * 5.1);
+    let minValue = Math.round(value.length * 5.1 + 4);
     scrollLine.min = minValue;
     scrollLine.value = minValue;
     widthOfWords.innerHTML = "Ваша ширина: " + minValue + "см";
