@@ -422,15 +422,13 @@ function activeFont() {
     if (
       (fonts[i].innerHTML === "Выбирите шрифт" &&
         fonts[i].style.left === "0%") ||
-      (fonts[i].innerHTML === "больше у нашего дизайнера" &&
-        fonts[i].style.left === "0%")
+      (fonts[i].innerHTML === "другой шрифт" && fonts[i].style.left === "0%")
     ) {
       yourText.style.fontFamily = "Arial";
     } else if (
       (fonts[i].innerHTML !== "Выбирите шрифт" &&
         fonts[i].style.left === "0%") ||
-      (fonts[i].innerHTML !== "больше у нашего дизайнера" &&
-        fonts[i].style.left === "0%")
+      (fonts[i].innerHTML !== "другой шрифт" && fonts[i].style.left === "0%")
     ) {
       yourText.style.fontFamily = fonts[i].innerHTML;
     }

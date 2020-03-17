@@ -51,6 +51,9 @@ body {
   font-size: 20px;
   font-weight: 700;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .word {
@@ -187,14 +190,6 @@ textarea::placeholder {
 }
 
 #ninethFont {
-  font-family: "Fifa";
-}
-
-#tenthFont {
-  font-family: "Michroma";
-}
-
-#eleventhFont {
   font-family: "Verbena";
 }
 
