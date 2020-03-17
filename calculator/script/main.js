@@ -56,7 +56,9 @@ scrollLine.oninput = ({ target: { value } }) => {
   widthOfWords.innerHTML = "Ваша ширина: " + value + "см";
   valueOfWidth = value;
   yourText.style.fontSize = getSizeOfText();
-  wordsForCalculate.length > 0 && getSallary(wordsForCalculate);
+  wordsForCalculate.length > 0 &&
+    wordsForCalculate !== "Ваштекст" &&
+    getSallary(wordsForCalculate);
 };
 
 /* positionFonts */
@@ -76,7 +78,6 @@ function getSallary(word) {
     let widthOfOneLetter = (valueOfWidth - 4) / word.length;
 
     let valueOfHeightAndLengthOfNeonKoof = heightAndcommonLengthsOfNeonKoof();
-    console.log(valueOfHeightAndLengthOfNeonKoof);
     let square =
       ((valueOfHeightAndLengthOfNeonKoof.height + 4) * valueOfWidth) / 10000;
 
