@@ -10,6 +10,13 @@
 }
 
 @font-face {
+  font-family: "Redis";
+  src: url("https://dimashpk.github.io/calculator/fonts/redis/redis.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
   font-family: "Realize";
   src: url("../fonts/realize/realize.eot");
   src: url("../fonts/realize/realize.eot");
