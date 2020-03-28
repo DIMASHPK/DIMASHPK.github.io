@@ -10,6 +10,13 @@
 }
 
 @font-face {
+  font-family: "Redis";
+  src: url("https://dimashpk.github.io/calculator/fonts/redis/redis.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
   font-family: "Realize";
   src: url("../fonts/realize/realize.eot");
   src: url("../fonts/realize/realize.eot");
@@ -27,6 +34,14 @@
   src: url("../fonts/realize/realize.eot?#iefix") format("embedded-opentype"),
     url("../fonts/realize/realize.woff") format("woff"),
     url("../fonts/realize/realize.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Realize";
+  src: 
+    url("https://dimashpk.github.io/calculator/fonts/realize/realize.woff") format("woff");
   font-style: normal;
   font-weight: 400;
 }
@@ -38,6 +53,14 @@
   src: url("../fonts/havana/havana.eot?#iefix") format("embedded-opentype"),
     url("../fonts/havana/havana.woff") format("woff"),
     url("../fonts/havana/havana.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Havana";
+  src: 
+    url("https://dimashpk.github.io/calculator/fonts/havana/havana.woff") format("woff");
   font-style: normal;
   font-weight: 400;
 }
@@ -66,12 +89,28 @@
 }
 
 @font-face {
+  font-family: "Cramaten";
+  src: 
+    url("https://dimashpk.github.io/calculator/fonts/cramaten/cramaten.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
   font-family: "Verbena";
   src: url("../fonts/verbena/verbena.eot");
   src: url("../fonts/verbena/verbena.eot");
   src: url("../fonts/verbena/verbena.eot?#iefix") format("embedded-opentype"),
     url("../fonts/verbena/verbena.woff") format("woff"),
     url("../fonts/verbena/verbena.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Verbena";
+  src: 
+    url("https://dimashpk.github.io/calculator/fonts/verbena/verbena.woff") format("woff");
   font-style: normal;
   font-weight: 400;
 }
