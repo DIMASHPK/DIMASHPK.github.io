@@ -1,12 +1,11 @@
 /* instead Oriya MN */
 @font-face {
-  font-family: "OpenSans";
-  src: url("../fonts/Open_Sans/OpenSans-Regular.eot");
-  src: url("../fonts/Open_Sans/OpenSans-Regular.eot");
-  src: url("../fonts/Open_Sans/OpenSans-Regular?#iefix")
-      format("embedded-opentype"),
-    url("../fonts/Open_Sans/OpenSans-Regular.woff") format("woff"),
-    url("../fonts/Open_Sans/OpenSans-Regular.ttf") format("truetype");
+  font-family: "Oriya";
+  src: url("../fonts/Oriya/Oriya.eot");
+  src: url("../fonts/Oriya/Oriya.eot");
+  src: url("../fonts/Oriya/Oriya?#iefix") format("embedded-opentype"),
+    url("../fonts/Oriya/Oriya.woff") format("woff"),
+    url("../fonts/Oriya/Oriya.ttf") format("truetype");
   font-style: normal;
   font-weight: 400;
 }
@@ -37,14 +36,12 @@
 
 @font-face {
   font-family: "Playfair";
-  src: url("../fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.eot");
-  src: url("../fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.eot");
-  src: url("../fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght?#iefix")
+  src: url("../fonts/Playfair_Display/PlayfairDisplay.eot");
+  src: url("../fonts/Playfair_Display/PlayfairDisplay.eot");
+  src: url("../fonts/Playfair_Display/PlayfairDisplay?#iefix")
       format("embedded-opentype"),
-    url("../fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.woff")
-      format("woff"),
-    url("../fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf")
-      format("truetype");
+    url("../fonts/Playfair_Display/PlayfairDisplay.woff") format("woff"),
+    url("../fonts/Playfair_Display/PlayfairDisplay.ttf") format("truetype");
   font-style: normal;
   font-weight: 400;
 }
