@@ -13,7 +13,7 @@ header {
 }
 
 header .logoWrap {
-  margin: 6px 76px 2px;
+  margin: 6px 0 2px;
   width: 25%;
 }
 
@@ -90,6 +90,11 @@ header .navigation .navigation__link {
   font-size: 22px;
   margin-top: 12px;
   color: #023c77;
+  transition: 0.3s;
+}
+
+.navigation__linkContent:hover {
+  color: #041629;
 }
 
 /* banner  */
@@ -146,12 +151,18 @@ header .navigation .navigation__link {
 }
 
 .banner__ReadMore:hover {
-  opacity: 0.6;
+  color: #8a7c12;
+  border-color: #8a7c12;
+}
+
+.banner__form {
+  margin-top: 10px;
 }
 
 .banner__form,
 .banner__inputWrap {
   display: flex;
+
   position: relative;
   justify-content: flex-end;
 }
@@ -166,7 +177,6 @@ header .navigation .navigation__link {
 
 .banner__inputWrap input {
   background: none;
-  margin-top: 10px;
   padding: 7px 0px 7px 68px;
   border: 1px solid #50bbdf;
   border-radius: 20px;
@@ -178,13 +188,13 @@ header .navigation .navigation__link {
 .banner__inputWrap label {
   position: absolute;
   color: #50bbdf;
-  top: 18px;
+  top: 50%;
   left: 11px;
   font-size: 11px;
+  transform: translateY(-50%);
 }
 
 .banner__submit {
-  margin-top: 10px;
   background: none;
   border: 1px solid #50bbdf;
   padding: 4px 22px;
@@ -196,7 +206,8 @@ header .navigation .navigation__link {
 }
 
 .banner__submit:hover {
-  opacity: 0.6;
+  color: #396325;
+  border-color: #396325;
 }
 
 .banner__imgWrap {
@@ -260,7 +271,7 @@ header .navigation .navigation__link {
 }
 
 .aboutUs_readMore:hover {
-  opacity: 0.6;
+  background: #5c150b;
 }
 
 /* Our services */
@@ -277,16 +288,22 @@ header .navigation .navigation__link {
   margin-bottom: 88px;
 }
 
+.justifyRight {
+  justify-content: flex-end;
+  display: flex;
+}
+
 .serviceWrap {
   width: 71%;
   margin: auto;
   padding-bottom: 37px;
   padding-top: 46px;
+  box-shadow: 6px 6px 8px 0px rgba(0, 0, 0, 0.4);
 }
 
 .serviceWrap__first {
   background: #09c1ba;
-  margin-left: 28px;
+  margin-left: 0px;
 }
 
 .serviceWrap__second {
@@ -295,12 +312,7 @@ header .navigation .navigation__link {
 
 .serviceWrap__third {
   background: #8d03ad;
-  margin-left: 79px;
-}
-
-.serviceWrap__first,
-.serviceWrap__third {
-  margin-top: 5px;
+  margin: 0;
 }
 
 .service__imgWrap {
@@ -385,7 +397,7 @@ header .navigation .navigation__link {
 }
 
 .serviceReadMore:hover {
-  opacity: 0.6;
+  color: #5c150b;
 }
 
 .ourServices__partnerWithUs {
@@ -402,7 +414,7 @@ header .navigation .navigation__link {
 }
 
 .ourServices__partnerWithUs:hover {
-  opacity: 0.6;
+  background: #5c150b;
 }
 
 /*  Our inspiration*/
@@ -442,7 +454,7 @@ header .navigation .navigation__link {
 }
 
 .ourInspiration__readMore:hover {
-  opacity: 0.6;
+  background: #5c150b;
 }
 
 /* Digital Media Arts */
@@ -516,6 +528,10 @@ header .navigation .navigation__link {
   margin: 0;
 }
 
+.footerLinks ul li {
+  height: 15px;
+}
+
 .footerLinks ul a {
   text-decoration: none;
   font-size: 13px;
@@ -524,6 +540,7 @@ header .navigation .navigation__link {
 .footerLinks a,
 .footerLinks p {
   color: #fff;
+  font-size: 13px;
 }
 
 .footerLinks .title {
@@ -589,7 +606,7 @@ header .navigation .navigation__link {
 }
 
 .modalInfo a:hover {
-  border-radius: 20px;
+  background-color: #e5ebe7;
 }
 
 .modalForm {
@@ -704,7 +721,7 @@ header .navigation .navigation__link {
 }
 
 .modalForm button:hover {
-  opacity: 0.6;
+  background-color: #406e8f;
 }
 
 .error {
@@ -739,7 +756,7 @@ span.error {
 }
 
 .modalForBuy .submit_button:hover {
-  opacity: 0.6;
+  background-color: #406e8f;
 }
 
 @media screen and (max-width: 1199px) {
@@ -757,6 +774,7 @@ span.error {
 
   .serviceWrap {
     width: 87%;
+    min-height: 417px;
   }
 
   .serviceWrap__third {
@@ -828,7 +846,6 @@ span.error {
 
   .banner__form,
   .banner__inputWrap {
-    margin-top: 10px;
     justify-content: center;
   }
 
@@ -913,6 +930,7 @@ span.error {
   .serviceWrap {
     width: 70%;
     margin: 0 auto 20px;
+    min-height: auto;
   }
 
   .digitalMediaArts__banerWrap {
