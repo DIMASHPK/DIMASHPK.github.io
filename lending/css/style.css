@@ -75,7 +75,7 @@ header .navigation .navigation__links {
   justify-content: space-between;
   margin: 0;
   height: 100%;
-  padding-left: 47px;
+  padding-left: 44px;
 }
 
 header .navigation .navigation__link {
@@ -833,9 +833,17 @@ span.error {
     margin: 0;
   }
 
+  .banner__leftSide .banner__subTitle {
+    margin-top: 40px;
+  }
+
   .banner__ReadMore {
     margin-left: 0;
-    margin-top: 10px;
+    margin-top: 40px;
+  }
+
+  .banner__form {
+    margin-top: 40px;
   }
 
   .banner__form,
