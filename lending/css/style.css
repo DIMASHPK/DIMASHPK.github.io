@@ -87,7 +87,7 @@ header .navigation .navigation__link {
 .navigation__linkContent {
   text-decoration: none;
   font-weight: 500;
-  font-size: 22px;
+  font-size: 20px;
   margin-top: 12px;
   color: #023c77;
   transition: 0.3s;
@@ -100,7 +100,8 @@ header .navigation .navigation__link {
 /* banner  */
 .banner {
   background: url("../img/bannerBackground.png");
-  padding-bottom: 57px;
+  padding-bottom: 50px;
+  height: 100vh;
 }
 
 .banner__leftSide {
@@ -207,7 +208,6 @@ header .navigation .navigation__link {
 
 .banner__imgWrap {
   width: 100%;
-  margin-top: -35px;
 }
 
 .banner__imgWrap img {
@@ -489,17 +489,17 @@ header .navigation .navigation__link {
 }
 
 .digitalMediaArts__banerWrap .digitalMediaArts__title h2 {
-  margin: 43px 0px 0 18px;
+  margin: 43px 0px 0 0;
   font-size: 31px;
   color: #023c77;
 }
 .digitalMediaArts__banerWrap p span {
   color: red;
-  font-family: "AvenirBold" !important;
+  font-family: "PlayFair" !important;
 }
 .digitalMediaArts__banerWrap .digitalMediaArts__title p {
   margin: 0;
-  margin-left: 60px;
+  text-align: center;
   font-size: 31px;
   color: #023c77;
   font-weight: 600;
@@ -766,6 +766,10 @@ span.error {
     padding-top: 100px;
   }
 
+  .aboutUs .col-lg-5 {
+    margin-top: -41px;
+  }
+
   .serviceWrap {
     width: 87%;
     min-height: 417px;
@@ -773,6 +777,10 @@ span.error {
 
   .serviceWrap__third {
     margin-left: 0;
+  }
+
+  .ourInspiration .col-lg-6.mt {
+    margin-top: -95px;
   }
 
   .modalWrap {
@@ -819,6 +827,10 @@ span.error {
     margin-bottom: 10px;
   }
 
+  .banner {
+    height: auto;
+  }
+
   .banner__leftSide {
     padding-top: 50px;
     text-align: center;
@@ -859,6 +871,10 @@ span.error {
     position: relative;
     left: 50%;
     transform: translateX(-44%);
+  }
+
+  .aboutUs .col-lg-5 {
+    margin-top: 0;
   }
 
   .ourServices {
@@ -914,6 +930,10 @@ span.error {
 
   .serviceWrap .service__subTitle {
     margin-top: 30px;
+  }
+
+  .ourInspiration .col-lg-6.mt {
+    margin-top: 0px;
   }
 
   .ourServices__partnerWithUs {
